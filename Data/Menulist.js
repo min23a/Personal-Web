@@ -1,0 +1,1 @@
+export const menulist = { "list": ["home", "about", "skill"] }

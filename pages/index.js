@@ -2,6 +2,7 @@ import Navigation from "@/Components/Navigation";
 import { personalData } from '@/Data/PersonalData';
 import Head from "next/head";
 import Hompage from "@/Components/Hompage";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <section className="w-[80vw] m-auto max-w-[1200px]">
           <Hompage />
         </section>
+        <Analytics />
       </main>
     </>
   )

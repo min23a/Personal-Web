@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import img from "../logo/ma.png"
+import img from "../logo/logo.png"
 import { menulist } from '@/Data/Menulist'
 import React from 'react'
 
@@ -11,7 +11,7 @@ const DesktopNav = () => {
         <>
             <nav className='flex  justify-between items-center p-3 w-[96vw] max-w-[1200px] h-[60px] m-auto'>
                 <Link href="/">
-                    <Image src={img} alt="" priority="true" className='h-[30px] w-[100%] my-6'></Image>
+                    <Image src={img} alt="" priority="true" className='h-[45px] w-[100%]'></Image>
                 </Link>
                 <div className='m-3'>
                     {menu ?

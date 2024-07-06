@@ -14,10 +14,10 @@ const HeaderSection = () => {
                 <div className='relative h-auto max-w-[90%] sm:max-w-[55%] flex justify-center flex-col gap-6'>
                     <heading>
                         <h1 className='font-bold text-[24px] sm:text-[32px] uppercase'>{data.name}</h1>
-                        <h6 className='text-[16px] text-justify'>{data.subtitle}</h6>
+                        <h6 className='text-[16px] text-justify'>{data.main_subtitle}</h6>
                     </heading>
                     <p className='text-justify'>
-                        {data.short}
+                        {data.common_desc}
                     </p>
                     <p className='font-bold text-gray-500 flex gap-2 items-center'>
                         <FontAwesomeIcon icon={faLocationDot} width={"15px"} />

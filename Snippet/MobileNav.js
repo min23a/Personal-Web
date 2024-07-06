@@ -1,5 +1,5 @@
 import { menulist } from '@/Data/Menulist';
-import img from "../logo/ma.png"
+import img from "../logo/logo.png"
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
@@ -27,7 +27,7 @@ const MobileNav = () => {
         <>
             <nav className='flex justify-between items-center m-auto w-[90vw]'>
                 <Link href="/" className='ml-2'>
-                    <Image src={img} alt="" priority="true" className='h-[30px] w-[100%] my-6'></Image>
+                    <Image src={img} alt="" priority="true" className='h-[45px] w-[100%]'></Image>
                 </Link>
                 <button onClick={() => changeStat()}>
                     {

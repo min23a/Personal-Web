@@ -5,6 +5,7 @@ import { DetailsContext } from '../Hompage'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 const HeaderSection = () => {
     const data = useContext(DetailsContext)
@@ -30,7 +31,11 @@ const HeaderSection = () => {
                         </div>
                         Available for new projects
                     </div>
-                    <button className='cta_hire w-2/5 bg-blue font-bold border-2 rounded-md p-2'>Hire Me</button>
+                    <Link href="/hire">
+                        <button className='cta_hire w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-green-500 font-bold border-2 rounded-md p-2'>
+                            Hire Me
+                        </button>
+                    </Link>
                 </div>
                 <div className='relative flex'>
                     <Image priority="true" src={img} alt="" className="w-[250px] h-auto m-auto border-white border-8" />

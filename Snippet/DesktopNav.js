@@ -5,7 +5,8 @@ import { menulist } from '@/Data/Menulist'
 import React from 'react'
 
 const DesktopNav = () => {
-    const menu = menulist.list
+    const menu = menulist.list;
+    const ext = menulist.external;
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
     return (
         <>
@@ -17,6 +18,15 @@ const DesktopNav = () => {
                     {menu ?
                         menu.map((x, index) => (
                             <Link key={index} href={x === "home" ? "/" : "#" + x}
+                                className={link_cls}
+                            >
+                                {x}
+                            </Link>
+                        )) : ""
+                    }
+                    {ext ?
+                        ext.map((x, index) => (
+                            <Link key={index} href={"/" + x}
                                 className={link_cls}
                             >
                                 {x}

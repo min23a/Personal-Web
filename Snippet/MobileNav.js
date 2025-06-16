@@ -10,7 +10,8 @@ import { handleDisplay } from './Show';
 const MobileNav = () => {
     const [x, setX] = useState("bar")
 
-    const menu = menulist.list
+    const menu = menulist.list;
+    const ext = menulist.external;
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
 
     const changeStat = () => {
@@ -44,6 +45,15 @@ const MobileNav = () => {
                         <Link key={index} href={x === "home" ? "/" : "#" + x}
                             className={link_cls}
                             onClick={() => changeStat()}
+                        >
+                            {x}
+                        </Link>
+                    )) : ""
+                }
+                {ext ?
+                    ext.map((x, index) => (
+                        <Link key={index} href={"/" + x}
+                            className={link_cls}
                         >
                             {x}
                         </Link>

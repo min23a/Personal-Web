@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hompage from "@/Components/Hompage";
 import { Analytics } from "@vercel/analytics/react"
 import Announcement from "@/Components/Section/Announcement";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
         <meta property="og:title" content={personalData.name} key="title" />
         <meta name="description" key="description" content={personalData.meta} />
         <meta name="keywords" content={personalData.tags} />
+        <Analytics />
+        <SpeedInsights />
       </Head>
       <main>
         <section className="sticky w-full bg-black text-white text-center p-2 ">
@@ -24,7 +27,6 @@ export default function Home() {
         <section className="w-[80vw] m-auto max-w-[1200px]">
           <Hompage />
         </section>
-        <Analytics />
       </main>
     </>
   )

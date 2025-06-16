@@ -22,7 +22,7 @@ const HeaderSection = () => {
                     </p>
                     <p className='font-bold text-gray-500 flex gap-2 items-center'>
                         <FontAwesomeIcon icon={faLocationDot} width={"15px"} />
-                        Dhaka, Bangladesh.
+                        Budapest, Hungary.
                     </p>
                     <div className='flex gap-2 items-center font-bold'>
                         <div className='relative flex h-3 w-3 items-center justify-center'>

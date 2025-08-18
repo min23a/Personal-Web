@@ -26,7 +26,7 @@ const MobileNav = () => {
 
     return (
         <>
-            <nav className='flex justify-between items-center m-auto w-[90vw]'>
+            <nav className='flex justify-between items-center m-auto py-2 w-[90vw]'>
                 <Link href="/" className='ml-2'>
                     <Image src={img} alt="" priority="true" className='h-[45px] w-[100%]'></Image>
                 </Link>
@@ -39,7 +39,7 @@ const MobileNav = () => {
                     }
                 </button>
             </nav>
-            <div id='menu_m' className='fixed top-[60px] bg-secondary text-white w-full h-[93%] my-3 px-4 flex flex-col items-start hidden'>
+            <div id='menu_m' className='fixed top-[61px] bg-third-d text-white w-full h-[93%] px-4 flex flex-col items-start hidden'>
                 {menu ?
                     menu.map((x, index) => (
                         <Link key={index} href={x === "home" ? "/" : "#" + x}

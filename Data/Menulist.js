@@ -1,1 +1,1 @@
-export const menulist = { "list": ["home", "about", "skill"], "external": ["hire"] }
+export const menulist = { "list": ["home", "about", "skill"], "external": ["projects", "hire"] }

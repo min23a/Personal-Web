@@ -14,7 +14,7 @@ const Skills = () => {
                 <FlexWarp>
                     {
                         exData ? exData.map((x, index) => (
-                            <CardImg w="2048" h="2048" key={index} img={x.src} cls="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] m-2 p-2" />
+                            <CardImg w="2048" h="2048" key={index} img={x.src} cls="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] m-2 p-2" />
                         )) : "xx"
                     }
                 </FlexWarp>

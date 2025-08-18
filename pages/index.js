@@ -18,11 +18,11 @@ export default function Home() {
         <SpeedInsights />
       </Head>
       <main>
-        <section className="sticky w-full bg-black text-white text-center p-2 ">
-          <Announcement />
-        </section>
         <section className="sticky top-0 w-full bg-secondary z-50">
           <Navigation />
+        </section>
+        <section className="sticky w-full bg-black text-white text-center p-2 ">
+          <Announcement />
         </section>
         <section className="w-[80vw] m-auto max-w-[1200px]">
           <Hompage />

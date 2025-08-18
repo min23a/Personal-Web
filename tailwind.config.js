@@ -15,7 +15,8 @@ module.exports = {
       },
       backgroundColor: {
         "primary": "blue",
-        "secondary": "rgb(158 177 253)"
+        "secondary": "rgb(158 177 255)",
+        "third-d": "rgb(128 153 255)"
       },
       padding: {
         "70": "70px"

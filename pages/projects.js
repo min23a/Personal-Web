@@ -1,20 +1,13 @@
-import Navigation from "@/Components/Navigation";
-import { personalData } from '@/Data/PersonalData';
 import Head from "next/head";
+import Navigation from "@/Components/Navigation";
 import Projects from "@/Components/Projects";
-import { Analytics } from "@vercel/analytics/react"
 import Announcement from "@/Components/Section/Announcement";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { personalData } from "@/Data/PersonalData";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getUserProfile, getRepos } from "@/services/git";
 
-export default function Project() {
-    const p = getStaticProps();
-
-    console.log(p);
-
-    if (!p) {
-        return <div>Loading...</div>;
-    }
-
+export default function Project({ profile, repositories }) {
     return (
         <>
             <Head>
@@ -25,29 +18,32 @@ export default function Project() {
                 <Analytics />
                 <SpeedInsights />
             </Head>
+
             <main>
                 <section className="sticky top-0 w-full bg-secondary z-50">
                     <Navigation />
                 </section>
-                <section className="sticky w-full bg-black text-white text-center p-2 ">
+
+                <section className="sticky w-full bg-black text-white text-center p-2">
                     <Announcement />
                 </section>
+
                 <section className="w-[80vw] m-auto max-w-[1200px]">
-                    <Projects />
+                    {/* Pass the data down to your Projects component */}
+                    <Projects profile={profile} repositories={repositories} />
                 </section>
             </main>
         </>
-    )
+    );
 }
 
-import { getUserProfile, getRepos } from '@/services/git';
-
 export async function getStaticProps() {
-    const username = 'min23a';
-    const [profile, repositories] = await Promise.all([
-        getUserProfile(username),
-        getRepos(username),
-    ]);
+    const username = process.env.GITHUB_USERNAME || "min23a"; // <- fix the env name
+    const profile = await getUserProfile(username);
+    const repositories = await getRepos(username);
 
-    return { props: { profile, repositories }, revalidate: 3600 };
+    return {
+        props: { profile, repositories },
+        revalidate: 3600, // optional ISR
+    };
 }

@@ -4,9 +4,13 @@ import axios from 'axios';
 const GIT_API = 'https://api.github.com';
 
 function authConfig() {
-    const headers = { Accept: 'application/vnd.github+json' };
+    const headers = {
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'nextjs-portfolio-app', // polite + some APIs expect UA
+    };
     if (process.env.GITHUB_TOKEN) {
-        headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`; // optional, raises rate limits
+        // "token" works for classic PATs; GitHub also accepts Bearer for fine-grained
+        headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
     }
     return { headers };
 }
@@ -38,7 +42,7 @@ function pickRepo(repo) {
         full_name: repo.full_name,
         html_url: repo.html_url,
         description: repo.description,
-        topics: repo.topics,
+        topics: Array.isArray(repo.topics) ? repo.topics : [],
         language: repo.language,
         stargazers_count: repo.stargazers_count,
         forks_count: repo.forks_count,
@@ -53,9 +57,15 @@ function pickRepo(repo) {
 export async function getUserProfile(user) {
     try {
         const res = await axios.get(`${GIT_API}/users/${user}`, authConfig());
+        // Axios only reaches here for 2xx; return on 200
         return pickUser(res.data);
     } catch (e) {
-        console.error('[getUserProfile] error:', e?.response?.status, e?.message);
+        const status = e?.response?.status;
+        if (status === 404) {
+            console.warn(`[getUserProfile] User ${user} not found`);
+            return null;
+        }
+        console.error('[getUserProfile] error:', status, e?.message);
         return null;
     }
 }
@@ -69,11 +79,15 @@ export async function getRepos(user, opts = {}) {
             `${GIT_API}/users/${user}/repos?per_page=100&type=owner&sort=updated`,
             authConfig()
         );
-        let repos = Array.isArray(res.data) ? res.data : [];
-        if (!includeForks) repos = repos.filter((r) => !r.fork);
 
+        let repos = Array.isArray(res.data) ? res.data : [];
+        if (!includeForks) repos = repos.filter(r => !r.fork);
+
+        // Stars desc, then recent push
         repos.sort((a, b) => {
-            if (b.stargazers_count !== a.stargazers_count) return b.stargazers_count - a.stargazers_count;
+            if (b.stargazers_count !== a.stargazers_count) {
+                return b.stargazers_count - a.stargazers_count;
+            }
             return new Date(b.pushed_at) - new Date(a.pushed_at);
         });
 

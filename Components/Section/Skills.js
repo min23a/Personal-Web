@@ -1,15 +1,15 @@
 import Heading from '@/Snippet/Heading'
 import React, { useContext } from 'react'
-import { DetailsContext } from '../Hompage'
 import FlexWarp from '@/Snippet/FlexWarp'
 import CardImg from '@/Snippet/CardImg'
+import { DetailsContext } from '../Layout'
 
 const Skills = () => {
     const data = useContext(DetailsContext)
     const exData = data.exData;
     return (
         <>
-            <section id="skill" className='pt-70'>
+            <section id="skill" className='pt-3'>
                 <Heading  >Skills & tools</Heading>
                 <FlexWarp>
                     {

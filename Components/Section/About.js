@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { DetailsContext } from '../Hompage'
 import Heading from '@/Snippet/Heading'
 import ImageWithText from '@/Snippet/ImageWithText'
 import img from "@/Images/banner2.jpeg"
 import Image from 'next/image'
 import SubHeading from '@/Snippet/SubHeading'
+import { DetailsContext } from '../Layout'
 
 const About = () => {
 
@@ -12,8 +12,8 @@ const About = () => {
 
     return (
         <>
-            <section id="about" className='pt-70 w-full'>
-                <Heading >Mysterious Me!!</Heading>
+            <section id="about" className='pt-3 w-full'>
+                <Heading >Mysterious About Me!!</Heading>
                 <p className='text-justify w-full m-auto p-3'>
                     {data.common_desc}
                 </p>

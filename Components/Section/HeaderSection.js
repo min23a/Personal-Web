@@ -1,11 +1,11 @@
 import ImageWithText from '@/Snippet/ImageWithText'
 import img from "@/Images/banner.jpg"
 import React, { useContext } from 'react'
-import { DetailsContext } from '../Hompage'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import { DetailsContext } from '../Layout'
 
 const HeaderSection = () => {
     const data = useContext(DetailsContext)

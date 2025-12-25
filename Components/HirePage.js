@@ -20,8 +20,8 @@ const HirePage = () => {
                         <input type='text' name='last_name' id="last_name" placeholder='Last Name' className={inp_cls} required />
                         <input type='number' name='number' id='number' placeholder='Number' className={inp_cls} required />
                         <input type="email" name='email' id="email" placeholder='Email' className={inp_cls} required />
-                        <input type='rich text' name='message' id='msg' placeholder='Message' className={inp_cls} required />
-                        <button type='submit' className='bg-green-400 text-white font-bold p-3 rounded w-2/5 m-auto '>Send</button>
+                        <textarea type='textarea' name='message' id='msg' placeholder='Message' className={inp_cls} required />
+                        <button type='submit' className='bg-secondary hover:bg-cta-hv text-white font-bold p-3 rounded w-2/5 m-auto '>Send</button>
                     </form>
                 </div>
                 <div className='flex items-center justify-center text-[20px] w-full'>

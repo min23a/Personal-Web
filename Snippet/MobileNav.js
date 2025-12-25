@@ -39,7 +39,7 @@ const MobileNav = () => {
                     }
                 </button>
             </nav>
-            <div id='menu_m' className='fixed top-[61px] bg-third-d text-white w-full h-[93%] px-4 flex flex-col items-start hidden'>
+            <div id='menu_m' className='fixed top-[61px] bg-third-d text-white w-full h-[90%] px-4 flex flex-col items-start closed animate-on-click'>
                 {menu ?
                     menu.map((x, index) => (
                         <Link key={index} href={x === "home" ? "/" : "#" + x}

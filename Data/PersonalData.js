@@ -3,7 +3,8 @@ import { expert } from '@/Data/Expert';
 
 export const personalData = {
     name: "Md. Minhazul Abedin",
-    main_subtitle: "Merchandiser || Professional Shopify Expert & MERN Stack Developer.",
+    main_subtitle: ["Professional Shopify Expert", "Front-end Developer", "MERN Stack Developer", "Merchandiser",],
+    main_desc: "A results-oriented merchandising professional with a BSc in Apparel Manufacturing Technology from BGMEA University of Fashion & Technology. With 11 months of industry experience—gained through an internship at FCI (BD) Ltd. and a Trainee Merchandiser role at Softex Sweater Industries Pvt. Ltd.—I have developed a strong ability to manage buyer relationships and navigate the complex demands of the apparel supply chain. With hands-on approach and keen industry insight contribute to streamlined operations and measurable business growth.",
     mer_sub: "Merchandiser || BSc in Apparel Manufacturing & Technology",
     shopify_sub: "Professional Shopify Expert & MERN Stack Developer.",
     common_desc: "In today’s fast-evolving eCommerce landscape, Shopify stands at the forefront—powering agile, conversion-focused storefronts for brands worldwide. With increasing demand for speed, customization, and seamless user experience, Shopify theme development has become a vital engine of digital growth. Backed by a BSc in Apparel Manufacturing Technology from BGMEA University of Fashion & Technology and a foundation in merchandising, I bring a rare combination of industry insight and technical expertise. My journey from managing product lines to building optimized Shopify themes enables me to craft solutions that not only look great but drive real business results. From dynamic UI components to performance-first coding, I specialize in developing themes that reflect both brand identity and strategic goals.",

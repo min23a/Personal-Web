@@ -6,19 +6,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { DetailsContext } from '../Layout'
+import Slider from './Slider'
 
 const HeaderSection = () => {
     const data = useContext(DetailsContext)
     return (
-        <section id="header">
+        <section id="header" className=' py-4 sm:py-8 lg:py-16'>
             <ImageWithText>
-                <div className='relative h-auto max-w-[90%] sm:max-w-[55%] flex justify-center flex-col gap-6'>
+                <div className='relative h-auto max-w-[100%] sm:max-w-[55%] flex justify-center flex-col gap-6 animate-on-scroll animate-fade-up'>
                     <heading>
                         <h1 className='font-bold text-[24px] sm:text-[32px] uppercase'>{data.name}</h1>
-                        <h6 className='text-[16px] text-justify'>{data.main_subtitle}</h6>
+                        <Slider loop={true} autoplay={true} delay={4000} arrows={false} dots={true} className="h-auto flex justify-center items-center">
+                            {data.main_subtitle.map((subtitle, index) => (
+                                <h4 key={index} className='text-[14px] sm:text-[24px] font-bold text-justify'>{subtitle}</h4>
+                            ))}
+                        </Slider>
                     </heading>
                     <p className='text-justify'>
-                        {data.common_desc}
+                        {data.main_desc}
                     </p>
                     <p className='font-bold text-gray-500 flex gap-2 items-center'>
                         <FontAwesomeIcon icon={faLocationDot} width={"15px"} />
@@ -37,7 +42,7 @@ const HeaderSection = () => {
                         </button>
                     </Link>
                 </div>
-                <div className='relative flex'>
+                <div className='relative flex animate-on-scroll animate-fade-up'>
                     <Image priority="true" src={img} alt="" className="w-[250px] h-auto m-auto border-white border-8" />
                     <div className='absolute top-[50px] right-[15px] sm:right-[-25px] z-[-1] m-auto bg-slate-300 h-[90%] border-transparent border-8 w-[250px] '></div>
                 </div>

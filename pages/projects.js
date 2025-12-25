@@ -20,7 +20,7 @@ export default function Project({ profile, repositories }) {
             </Head>
 
             <main>
-                <section className="sticky top-0 w-full bg-secondary z-50">
+                <section className="sticky top-0 w-full text-white font-bold bg-secondary z-50">
                     <Navigation />
                 </section>
 

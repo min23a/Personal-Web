@@ -1,0 +1,67 @@
+/*animate.css */
+:root {
+  --sa-duration: 800ms;
+  --sa-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sa-distance: 32px;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: opacity, transform;
+  transition: opacity var(--sa-duration) var(--sa-ease),
+    transform var(--sa-duration) var(--sa-ease);
+}
+
+/* Direction variants */
+.animate-on-scroll.animate-fade-left {
+  transform: translate3d(calc(-1 * var(--sa-distance)), 0, 0);
+}
+.animate-on-scroll.animate-fade-right {
+  transform: translate3d(var(--sa-distance), 0, 0);
+}
+
+.animate-on-scroll.animate-fade-up {
+  transform: translate3d(0, var(--sa-distance), 0);
+}
+
+/* When revealed */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optional quick delay helpers */
+.animate-delay-100 {
+  transition-delay: 100ms;
+}
+.animate-delay-200 {
+  transition-delay: 200ms;
+}
+.animate-delay-300 {
+  transition-delay: 300ms;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/*animate on click*/
+.animate-on-click {
+  opacity: 0;
+  max-height: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: opacity, max-height;
+  transition: opacity var(--sa-duration) var(--sa-ease),
+    max-height var(--sa-duration) var(--sa-ease);
+}
+
+.animate-on-click.open {
+  opacity: 1;
+  max-height: 100%;
+}

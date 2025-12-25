@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
                 <SpeedInsights />
             </Head>
             <main>
-                <section className="sticky top-0 w-full bg-secondary z-50">
+                <section className="sticky top-0 w-full text-white font-bold bg-secondary z-50">
                     <Navigation />
                 </section>
                 <section className="sticky w-full bg-black text-white text-center p-2 ">

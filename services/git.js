@@ -71,7 +71,7 @@ export async function getUserProfile(user) {
 }
 
 export async function getRepos(user, opts = {}) {
-    const limit = opts.limit ?? 12;
+    const limit = opts.limit ?? 20;
     const includeForks = opts.includeForks ?? false;
 
     try {

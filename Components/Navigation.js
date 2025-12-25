@@ -5,10 +5,10 @@ import MobileNav from '@/Snippet/MobileNav'
 const Navigation = () => {
     const [size, setSize] = useState(768)
 
-    let screen = 768
+    let screen = 768;
 
     if (typeof window !== "undefined") {
-        screen = window.screen.width
+        screen = window.screen.width;
     }
 
     useEffect(

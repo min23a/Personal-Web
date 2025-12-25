@@ -12,7 +12,7 @@ const DesktopNav = () => {
         <>
             <nav className='flex  justify-between items-center p-3 w-[96vw] max-w-[1200px] h-[60px] m-auto'>
                 <Link href="/">
-                    <Image src={img} alt="" priority="true" className='h-[45px] w-[100%]'></Image>
+                    <h1 className='flex items-start font-bold text-[40px] lavishly'>Abedin</h1>
                 </Link>
                 <div className='m-3'>
                     {menu ?
@@ -35,7 +35,6 @@ const DesktopNav = () => {
                     }
                 </div>
             </nav>
-            <hr />
         </>
     )
 }

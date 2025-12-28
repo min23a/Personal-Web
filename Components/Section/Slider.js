@@ -193,7 +193,7 @@ export default function Slider({
                         {slides.map((slide, i) => (
                             <div
                                 key={i}
-                                className={`min-w-full flex-shrink-0 ${slideClassName}`}
+                                className={`min-w-full slide-cont flex-shrink-0 ${slideClassName}`}
                                 aria-hidden={i !== activeIndex}
                             >
                                 {slide}

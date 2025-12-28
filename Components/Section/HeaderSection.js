@@ -18,7 +18,7 @@ const HeaderSection = () => {
                         <h1 className='font-bold text-[24px] sm:text-[32px] uppercase'>{data.name}</h1>
                         <Slider loop={true} autoplay={true} delay={4000} arrows={false} dots={true} className="h-auto flex justify-center items-center">
                             {data.main_subtitle.map((subtitle, index) => (
-                                <h4 key={index} className='text-[14px] sm:text-[24px] font-bold text-justify'>{subtitle}</h4>
+                                <h4 key={index} className='text-[14px] sm:text-[24px] font-bold text-justify typing max-w-min'>{subtitle}</h4>
                             ))}
                         </Slider>
                     </heading>

@@ -4,6 +4,11 @@ import { useEffect } from "react";
 import { initScrollAnimate, destroyScrollAnimate } from "@/services/scroll-animate"
 
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+import { Analytics } from '@vercel/analytics/react'
+
+
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     initScrollAnimate();
@@ -21,5 +26,9 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  return <Component {...pageProps} />
+  return <>
+    <Component {...pageProps} />
+    <Analytics />
+    <SpeedInsights />
+  </>
 }

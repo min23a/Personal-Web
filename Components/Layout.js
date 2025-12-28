@@ -1,10 +1,8 @@
 import { personalData } from '@/Data/PersonalData'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Head from 'next/head'
 import React, { createContext } from 'react'
 import Navigation from './Navigation'
 import Announcement from './Section/Announcement'
-import { Analytics } from '@vercel/analytics/react'
 
 export const DetailsContext = createContext();
 
@@ -16,8 +14,7 @@ const Layout = ({ children }) => {
                 <meta property="og:title" content={personalData.name} key="title" />
                 <meta name="description" key="description" content={personalData.meta} />
                 <meta name="keywords" content={personalData.tags} />
-                <Analytics />
-                <SpeedInsights />
+
             </Head>
             <main>
                 <section className="sticky top-0 w-full text-white font-bold bg-secondary z-50">

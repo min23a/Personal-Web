@@ -28,8 +28,9 @@ const MobileNav = () => {
         <>
             <nav className='flex justify-between items-center m-auto py-2 w-[90vw]'>
                 <Link href="/" className='ml-2'>
-                    <Image src={img} alt="" priority="true" className='h-[45px] w-[100%]'></Image>
+                    <h1 className='flex items-start font-bold text-[40px] lavishly'>Abedin</h1>
                 </Link>
+
                 <button onClick={() => changeStat()}>
                     {
                         x === "bar" ?

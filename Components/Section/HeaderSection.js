@@ -1,5 +1,5 @@
 import ImageWithText from '@/Snippet/ImageWithText'
-import img from "@/Images/banner.jpg"
+import img from "@/Images/banner4.jpeg"
 import React, { useContext } from 'react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,24 +7,25 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { DetailsContext } from '../Layout'
 import Slider from './Slider'
+import { ReadMore } from '@/Snippet/Typograph'
 
 const HeaderSection = () => {
     const data = useContext(DetailsContext)
     return (
-        <section id="header" className=' py-4 sm:py-8 lg:py-16'>
+        <section id="header" className=' pt-3 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 lg:pb-16'>
             <ImageWithText>
-                <div className='relative h-auto max-w-[100%] sm:max-w-[55%] flex justify-center flex-col gap-6 animate-on-scroll animate-fade-up'>
+                <div className='relative h-auto max-w-[100%] sm:max-w-[60%] flex justify-center flex-col gap-6 animate-on-scroll animate-fade-up'>
                     <heading>
                         <h1 className='font-bold text-[24px] sm:text-[32px] uppercase'>{data.name}</h1>
-                        <Slider loop={true} autoplay={true} delay={4000} arrows={false} dots={true} className="h-auto flex justify-center items-center">
+                        <Slider loop={true} autoplay={true} delay={4000} arrows={false} margin="0" dots={true} className="h-auto flex justify-start items-center">
                             {data.main_subtitle.map((subtitle, index) => (
                                 <h4 key={index} className='text-[14px] sm:text-[24px] font-bold text-justify typing max-w-min'>{subtitle}</h4>
                             ))}
                         </Slider>
                     </heading>
-                    <p className='text-justify'>
+                    <ReadMore contentClassName='text-justify animate-fade' lines={3}>
                         {data.main_desc}
-                    </p>
+                    </ReadMore>
                     <p className='font-bold text-gray-500 flex gap-2 items-center'>
                         <FontAwesomeIcon icon={faLocationDot} width={"15px"} />
                         Budapest, Hungary.
@@ -37,14 +38,13 @@ const HeaderSection = () => {
                         Available for new projects
                     </div>
                     <Link href="/hire">
-                        <button className='cta_hire w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-green-500 font-bold border-2 rounded-md p-2'>
-                            Hire Me
+                        <button className='cta_hire w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-indigo-500 font-bold border-2 rounded-md p-2'>
+                            Ask Quote
                         </button>
                     </Link>
                 </div>
                 <div className='relative flex animate-on-scroll animate-fade-up'>
                     <Image priority="true" src={img} alt="" className="w-[250px] h-auto m-auto border-white border-8" />
-                    <div className='absolute top-[50px] right-[15px] sm:right-[-25px] z-[-1] m-auto bg-slate-300 h-[90%] border-transparent border-8 w-[250px] '></div>
                 </div>
             </ImageWithText>
         </section>

@@ -1,4 +1,4 @@
-import { HireDetails } from "@/pages/hire";
+import { HireDetails } from "@/pages/contact";
 import { faUpwork } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -99,7 +99,7 @@ const HirePage = () => {
         <div className="w-4/5 m-auto h-full flex flex-col gap-4 items-center justify-center">
             <h1 className="font-bold text-center text-[20px] uppercase mt-4">Contact</h1>
 
-            <div className="m-auto w-1/2">
+            <div className="m-auto w-full sm:w-1/2">
                 <form id="contact" onSubmit={onSubmit} className="w-full flex flex-col gap-2 m-4" noValidate>
                     <input
                         onChange={handleChange}

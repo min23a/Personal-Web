@@ -9,7 +9,7 @@ import React, { createContext } from 'react'
 
 export const HireDetails = createContext();
 
-const hire = () => {
+const contact = () => {
     return (
         <>
             <Head>
@@ -39,4 +39,4 @@ const hire = () => {
     )
 }
 
-export default hire
+export default contact

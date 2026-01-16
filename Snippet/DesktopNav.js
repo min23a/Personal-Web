@@ -1,8 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import img from "../logo/logo.png"
 import { menulist } from '@/Data/Menulist'
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 
 const DesktopNav = () => {
     const menu = menulist.list;
@@ -10,9 +11,11 @@ const DesktopNav = () => {
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
     return (
         <>
-            <nav className='flex  justify-between items-center p-3 w-[96vw] max-w-[1200px] h-[60px] m-auto'>
+            <nav className='flex justify-between items-center p-3 w-[96vw] max-w-[1200px] h-[60px] m-auto'>
                 <Link href="/">
-                    <h1 className='flex items-start font-bold text-[40px] lavishly'>Abedin</h1>
+                    <h1 className='flex items-start font-bold text-[40px] lavishly bg-gradient-to-r from-indigo-500 via-purple-500 to-white-500 bg-clip-text text-transparent'>
+                        Abedin
+                    </h1>
                 </Link>
                 <div className='m-3'>
                     {menu ?
@@ -33,6 +36,14 @@ const DesktopNav = () => {
                             </Link>
                         )) : ""
                     }
+                </div>
+                <div className='menu-icons w-[30%}'>
+                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME}`} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
+                    </Link>
+                    <Link href="/Md Minhazul Abedin.pdf" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFileDownload} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
+                    </Link>
                 </div>
             </nav>
         </>

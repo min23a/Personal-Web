@@ -1,5 +1,5 @@
-import Heading from '@/Snippet/Heading'
 import React, { useContext } from 'react'
+import { Heading } from '@/Snippet/Typograph'
 import FlexWarp from '@/Snippet/FlexWarp'
 import CardImg from '@/Snippet/CardImg'
 import { DetailsContext } from '../Layout'

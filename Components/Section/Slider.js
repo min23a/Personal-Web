@@ -19,6 +19,7 @@ export default function Slider({
     pauseOnHover = true,
     pauseOnInteraction = true,
     resumeDelay = 2500,
+    margin = "auto",
 }) {
     const slides = useMemo(() => React.Children.toArray(children), [children]);
     const count = slides.length;
@@ -181,8 +182,8 @@ export default function Slider({
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className="relative w-[80%] m-auto">
-                <div className="overflow-hidden">
+            <div className={`relative w-[80%] m-${margin}`}>
+                <div className="overflow-x-hidden">
                     <div
                         className="flex transition-transform duration-500 ease-out will-change-transform"
                         style={{ transform: `translate3d(${-activeIndex * 100}%, 0, 0)` }}
@@ -244,7 +245,7 @@ export default function Slider({
                                 key={i}
                                 type="button"
                                 onClick={() => onGoTo(i)}
-                                className={`h-2.5 rounded-full transition-all ${active ? "w-8 bg-black" : "w-2.5 bg-black/30 hover:bg-black/50"
+                                className={`h-2.5 rounded-full transition-all ${active ? "w-8 bg-white" : "w-2.5 bg-white/30 hover:bg-white/50"
                                     }`}
                                 aria-label={`Go to slide ${i + 1}`}
                                 aria-current={active ? "true" : "false"}

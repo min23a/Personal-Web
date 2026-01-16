@@ -81,6 +81,10 @@
   animation: none;
 }
 
+.animate-fade {
+  animation: fadeIn 1s ease-in forwards;
+}
+
 @keyframes typing {
   0% {
     width: 0;
@@ -93,5 +97,14 @@
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

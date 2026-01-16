@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { handleDisplay } from './Show';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const MobileNav = () => {
     const [x, setX] = useState("bar")
@@ -26,7 +27,7 @@ const MobileNav = () => {
 
     return (
         <>
-            <nav className='flex justify-between items-center m-auto py-2 w-[90vw]'>
+            <nav className='flex justify-between items-center m-auto py-2 w-full px-3'>
                 <Link href="/" className='ml-2'>
                     <h1 className='flex items-start font-bold text-[40px] lavishly'>Abedin</h1>
                 </Link>
@@ -40,7 +41,7 @@ const MobileNav = () => {
                     }
                 </button>
             </nav>
-            <div id='menu_m' className='fixed top-[61px] bg-third-d text-white w-full h-[90%] px-4 flex flex-col items-start closed animate-on-click'>
+            <div id='menu_m' className='fixed top-[61px] bg-gradient-to-r from-indigo-500 via-purple-500 to-white-500 text-white w-[90%] h-[90%] px-4 flex flex-col items-start closed animate-on-click'>
                 {menu ?
                     menu.map((x, index) => (
                         <Link key={index} href={x === "home" ? "/" : "#" + x}
@@ -60,6 +61,14 @@ const MobileNav = () => {
                         </Link>
                     )) : ""
                 }
+                <div className='menu-icons w-[80%} '>
+                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME}`} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
+                    </Link>
+                    <Link href="/Md Minhazul Abedin.pdf" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFileDownload} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
+                    </Link>
+                </div>
             </div>
         </>
     )

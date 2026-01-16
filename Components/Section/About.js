@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-import Heading from '@/Snippet/Heading'
+import { Heading, SubHeading } from '@/Snippet/Typograph'
 import ImageWithText from '@/Snippet/ImageWithText'
 import img from "@/Images/banner2.jpeg"
 import Image from 'next/image'
-import SubHeading from '@/Snippet/SubHeading'
 import { DetailsContext } from '../Layout'
 
 const About = () => {

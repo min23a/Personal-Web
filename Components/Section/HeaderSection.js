@@ -12,7 +12,7 @@ import { ReadMore } from '@/Snippet/Typograph'
 const HeaderSection = () => {
     const data = useContext(DetailsContext)
     return (
-        <section id="header" className=' pt-3 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 lg:pb-16'>
+        <section id="header" className=' pt-3 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 lg:pb-16 h-[80vh]'>
             <ImageWithText>
                 <div className='relative h-auto max-w-[100%] sm:max-w-[60%] flex justify-center flex-col gap-6 animate-on-scroll animate-fade-up'>
                     <heading>
@@ -23,7 +23,7 @@ const HeaderSection = () => {
                             ))}
                         </Slider>
                     </heading>
-                    <ReadMore contentClassName='text-justify animate-fade' lines={3}>
+                    <ReadMore contentClassName='text-justify animate-fade text-[16px] sm:text-[20px]' lines={3}>
                         {data.main_desc}
                     </ReadMore>
                     <p className='font-bold text-gray-500 flex gap-2 items-center'>
@@ -37,7 +37,7 @@ const HeaderSection = () => {
                         </div>
                         Available for new projects
                     </div>
-                    <Link href="/hire">
+                    <Link href="/contact">
                         <button className='cta_hire w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-indigo-500 font-bold border-2 rounded-md p-2'>
                             Ask Quote
                         </button>

@@ -1,5 +1,5 @@
 import Layout from '@/Components/Layout';
-import About from '@/Components/Section/About';
+import About from '@/Components/Section/AboutMe';
 import React, { createContext } from 'react'
 
 export const AboutDetails = createContext();

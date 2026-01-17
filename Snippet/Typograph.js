@@ -4,7 +4,7 @@ import { useId, useMemo, useState } from 'react'
 export const SubHeading = ({ children, id, cls }) => {
     return (
         <>
-            <h3 id={id ? id : ""} className={`font-bold text-left text-[16px] capitalise my-3 ${cls}`}>{children}</h3>
+            <h3 id={id ? id : ""} className={`font-bold text-left text-[16px] sm:text-[20px] capitalise mb-3 ${cls}`}>{children}</h3>
         </>
     )
 }
@@ -12,7 +12,7 @@ export const SubHeading = ({ children, id, cls }) => {
 export const Heading = ({ children, id, cls, hr }) => {
     return (
         <>
-            <h1 id={id ? id : ""} className={"font-bold text-center text-[20px] uppercase my-6 " + cls}>{children}</h1>
+            <h1 id={id ? id : ""} className={"font-bold text-center text-[20px] sm:text-[32px] uppercase mb-6 " + cls}>{children}</h1>
             {hr ? <hr /> : null}
         </>
     )

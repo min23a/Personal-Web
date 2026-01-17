@@ -4,7 +4,7 @@ import React from 'react'
 const CardImg = ({ cls, img, w, h }) => {
     return (
         <div className={cls ? cls + ' max-w-[400px] max-h-[400px]' : 'max-w-[400px] max-h-[400px]'}>
-            <Image priority="true" width={w} height={h} src={img} alt="" />
+            <Image priority="false" width={w} height={h} src={img} alt="" />
         </div>
     )
 }

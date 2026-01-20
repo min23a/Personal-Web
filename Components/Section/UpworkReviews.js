@@ -1,4 +1,5 @@
-import { ReadMore } from "@/Snippet/Typograph";
+import FlexWarp from "@/Snippet/FlexWarp";
+import { Heading, ReadMore } from "@/Snippet/Typograph";
 import React, { useMemo, useState } from "react";
 
 function Stars({ rating = 5 }) {
@@ -33,7 +34,7 @@ const UpworkReviews = ({
         <section className={"w-full " + cls}>
             <div className="flex items-end justify-between gap-4 mb-4 w-full">
                 <div className="text-center w-full">
-                    <h2 className="text-xl sm:text-2xl font-bold">Highlights from Previous Clients</h2>
+                    <Heading cls="text-center">Highlights from Previous Clients</Heading>
                 </div>
 
                 {profileUrl ? (
@@ -48,9 +49,9 @@ const UpworkReviews = ({
                 ) : null}
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <FlexWarp className="gap-6">
                 {visible.map((r) => (
-                    <article key={r.id} className="rounded-2xl w-[40%] sm:w-full border border-indigo-500/10 p-4 hover:scale-105 transition-scale duration-300">
+                    <article key={r.id} className="rounded-2xl w-full sm:w-[30%] border border-indigo-500/10 p-4 hover:scale-105 transition-scale duration-300">
                         <div className="">
                             <div className="min-w-0">
                                 <p className="font-medium truncate">{r.title}</p>
@@ -70,7 +71,7 @@ const UpworkReviews = ({
                         ) : null}
                     </article>
                 ))}
-            </div>
+            </FlexWarp>
 
             {showAllButton && reviews.length > initialCount && (
                 <div className="mt-6 flex justify-center">

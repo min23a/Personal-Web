@@ -1,12 +1,11 @@
 import { menulist } from '@/Data/Menulist';
-import img from "../logo/logo.png"
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { handleDisplay } from './Show';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { personalData } from '@/Data/PersonalData';
 
 const MobileNav = () => {
     const [x, setX] = useState("bar")
@@ -29,7 +28,7 @@ const MobileNav = () => {
         <>
             <nav className='flex justify-between items-center m-auto py-2 w-full px-3'>
                 <Link href="/" className='ml-2'>
-                    <h1 className='flex items-start font-bold text-[40px] lavishly'>Abedin</h1>
+                    <h1 className='flex items-start font-bold text-[40px] lavishly bg-gradient-to-r from-indigo-500 via-purple-500 to-white-500 bg-clip-text text-transparent'>Abedin</h1>
                 </Link>
 
                 <button onClick={() => changeStat()}>
@@ -62,7 +61,7 @@ const MobileNav = () => {
                     )) : ""
                 }
                 <div className='menu-icons w-[80%} '>
-                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME}`} target="_blank" rel="noopener noreferrer">
+                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
                     </Link>
                     <Link href="/Md Minhazul Abedin.pdf" target="_blank" rel="noopener noreferrer">

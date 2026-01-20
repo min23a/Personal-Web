@@ -3,6 +3,7 @@ import { expert } from '@/Data/Expert';
 
 export const personalData = {
     name: "Md. Minhazul Abedin",
+    github: "min23a",
     main_subtitle: ["Professional Shopify Expert", "Front-end Developer", "MERN Stack Developer", "Merchandiser",],
     main_desc: "A results-oriented merchandising professional with a BSc in Apparel Manufacturing Technology from BGMEA University of Fashion & Technology. With 11 months of industry experience—gained through an internship at FCI (BD) Ltd. and a Trainee Merchandiser role at Softex Sweater Industries Pvt. Ltd.—I have developed a strong ability to manage buyer relationships and navigate the complex demands of the apparel supply chain. With hands-on approach and keen industry insight contribute to streamlined operations and measurable business growth.",
     mer_sub: "Merchandiser || BSc in Apparel Manufacturing & Technology",

@@ -12,7 +12,7 @@ export const SubHeading = ({ children, id, cls }) => {
 export const Heading = ({ children, id, cls, hr }) => {
     return (
         <>
-            <h1 id={id ? id : ""} className={"font-bold text-center text-[20px] sm:text-[32px] uppercase mb-6 " + cls}>{children}</h1>
+            <h1 id={id ? id : ""} className={"font-bold text-[20px] sm:text-[32px] uppercase mb-6 " + cls}>{children}</h1>
             {hr ? <hr /> : null}
         </>
     )

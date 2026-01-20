@@ -1,7 +1,7 @@
 import RepoCard from "@/Snippet/RepoCard";
 import Image from "next/image";
 
-export default function Projects({ profile, repositories = [] }) {
+export default function GitProjects({ profile, repositories = [] }) {
     return (
         <div className="text-gray-200">
             {/* Header */}

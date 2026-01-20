@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navigation from "@/Components/Navigation";
-import Projects from "@/Components/Projects";
+import Projects from "@/Components/GitProjects";
 import Announcement from "@/Components/Section/Announcement";
 import { personalData } from "@/Data/PersonalData";
 import { Analytics } from "@vercel/analytics/react";
@@ -20,12 +20,8 @@ export default function Project({ profile, repositories }) {
             </Head>
 
             <main>
-                <section className="sticky top-0 w-full text-white font-bold bg-secondary z-50">
+                <section className="sticky top-0 w-full text-white bg-secondary z-50">
                     <Navigation />
-                </section>
-
-                <section className="sticky w-full bg-black text-white text-center p-2">
-                    <Announcement />
                 </section>
 
                 <section className="w-[80vw] m-auto max-w-[1200px]">

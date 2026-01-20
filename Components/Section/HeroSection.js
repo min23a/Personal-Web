@@ -1,7 +1,6 @@
 import React from 'react'
 import Slider from './Slider'
-import bg from "@/Images/HeroBg.jpg";
-import Image from 'next/image';
+import bg from "@/Images/banner2.jpeg";
 import { Heading, SubHeading, CTA } from '@/Snippet/Typograph';
 import ImgwithBG from '@/Snippet/ImgwithBG';
 

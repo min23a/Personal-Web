@@ -26,10 +26,6 @@ const contact = () => {
                         <Navigation />
                     </section>
 
-                    <section className="sticky w-full bg-black text-white text-center p-2 ">
-                        <Announcement />
-                    </section>
-
                     <section className='w-[80vw] m-auto max-w-[1200px]'>
                         <HirePage />
                     </section>

@@ -9,8 +9,8 @@ const Skills = () => {
     const exData = data.exData;
     return (
         <>
-            <section id="skill" className='pt-3'>
-                <Heading cls="animate-on-scroll animate-fade-up" >Skills & tools</Heading>
+            <section id="skill" className='pt-3 mb-3 sm:mb-8 w-full'>
+                <Heading cls="animate-on-scroll animate-fade-up text-center" >Skills & tools</Heading>
                 <FlexWarp>
                     {
                         exData ? exData.map((x, index) => (

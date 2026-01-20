@@ -12,8 +12,8 @@ const AboutMe = () => {
 
     return (
         <>
-            <section id="about" className='pt-3 w-full'>
-                <Heading cls="animate-on-scroll animate-fade-up" >Mysterious About Me!!</Heading>
+            <section id="about" className='pt-3 w-full mb-4 sm:mb-8'>
+                <Heading cls="animate-on-scroll animate-fade-up text-center" >Mysterious About Me!!</Heading>
                 <p className='text-center w-full m-auto p-3 animate-on-scroll animate-fade-up mb-3 sm:mb-6 text-[18px] sm:text-[20px] lg:text-[22px]'>
                     {data.common_desc_short}
                 </p>

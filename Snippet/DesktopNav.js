@@ -4,6 +4,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import { personalData } from '@/Data/PersonalData'
 
 const DesktopNav = () => {
     const menu = menulist.list;
@@ -38,7 +39,7 @@ const DesktopNav = () => {
                     }
                 </div>
                 <div className='menu-icons w-[30%}'>
-                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME}`} target="_blank" rel="noopener noreferrer">
+                    <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
                     </Link>
                     <Link href="/Md Minhazul Abedin.pdf" target="_blank" rel="noopener noreferrer">

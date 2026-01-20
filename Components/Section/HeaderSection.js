@@ -12,7 +12,7 @@ import { ReadMore } from '@/Snippet/Typograph'
 const HeaderSection = () => {
     const data = useContext(DetailsContext)
     return (
-        <section id="header" className=' pt-3 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 lg:pb-16 h-[80vh]'>
+        <section id="header" className=' pt-3 sm:pt-6 lg:pt-8 pb-4 sm:pb-8 lg:pb-16 sm:h-[80vh]'>
             <ImageWithText>
                 <div className='relative h-auto max-w-[100%] sm:max-w-[60%] flex justify-center flex-col gap-6 animate-on-scroll animate-fade-up'>
                     <heading>
@@ -38,7 +38,7 @@ const HeaderSection = () => {
                         Available for new projects
                     </div>
                     <Link href="/contact">
-                        <button className='cta_hire w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-indigo-500 font-bold border-2 rounded-md p-2'>
+                        <button className='cta_hire w-full sm:w-2/5 text-white animate-bounce transition-colors duration-1000 bg-secondary hover:bg-indigo-500 font-bold border-2 rounded-md p-2'>
                             Ask Quote
                         </button>
                     </Link>

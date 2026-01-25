@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL || "https://your-domain.com",
+    siteUrl: process.env.SITE_URL || "https://abedin.online",
     generateRobotsTxt: true,
     sitemapSize: 7000,
     changefreq: "weekly",

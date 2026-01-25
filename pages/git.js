@@ -12,14 +12,15 @@ import Ending from "@/Components/Section/Ending";
 export default function Project({ profile, repositories }) {
     return (
         <>
-            <JsonLd data={schema.git}>
+            <Head>
                 <title>{`${personalData.name} - GIT`}</title>
                 <meta property="og:title" content={personalData.name} key="title" />
                 <meta name="description" key="description" content={personalData.meta} />
                 <meta name="keywords" content={personalData.tags} />
                 <Analytics />
                 <SpeedInsights />
-            </JsonLd>
+            </Head>
+            <JsonLd data={schema.git} />
 
             <main>
                 <section className="sticky top-0 w-full text-white bg-secondary z-50">

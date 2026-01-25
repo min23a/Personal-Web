@@ -7,6 +7,7 @@ import { hireDetails } from '@/Data/Hiredetails'
 import { schema } from '@/Data/SeoSchema'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Head from 'next/head'
 import React, { createContext } from 'react'
 
 export const HireDetails = createContext();
@@ -14,14 +15,15 @@ export const HireDetails = createContext();
 const contact = () => {
     return (
         <>
-            <JsonLd data={schema.contact}>
+            <Head>
                 <title>{`${hireDetails.title} - Contact`}</title>
                 <meta property="og:title" content={hireDetails.title} key="title" />
                 <meta name="description" key="description" content={hireDetails.meta_desc} />
                 <meta name="keywords" content={hireDetails.tag} />
                 <Analytics />
                 <SpeedInsights />
-            </JsonLd>
+            </Head>
+            <JsonLd data={schema.contact} />
             <HireDetails.Provider value={hireDetails}>
                 <main>
                     <section className="sticky top-0 w-full text-white bg-secondary z-50">

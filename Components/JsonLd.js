@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function JsonLd({ children, data }) {
+export default function JsonLd({ data }) {
     if (!data) return null;
 
     // Basic safety: avoid injecting "</script" sequences
@@ -12,7 +12,6 @@ export default function JsonLd({ children, data }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: json }}
             />
-            {children}
         </Head>
     );
 }

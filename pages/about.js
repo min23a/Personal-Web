@@ -7,6 +7,7 @@ import { schema } from '@/Data/SeoSchema';
 import Pagewidth from '@/Snippet/Pagewidth';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Head from 'next/head';
 import React, { createContext } from 'react'
 
 export const AboutDetails = createContext();
@@ -15,14 +16,15 @@ const about = () => {
 
     return (
         <>
-            <JsonLd data={schema.about}>
+            <Head>
                 <title>{`${personalData.name} - About`}</title>
                 <meta property="og:title" content={personalData.name} key="title" />
                 <meta name="description" key="description" content={personalData.meta} />
                 <meta name="keywords" content={personalData.tags} />
                 <Analytics />
                 <SpeedInsights />
-            </JsonLd>
+            </Head>
+            <JsonLd data={schema.about} />
             <Layout>
                 <Pagewidth>
                     <About></About>

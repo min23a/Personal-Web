@@ -1,4 +1,4 @@
-const { projectSlugs } = require("./Data/projects");
+const { projectSlugs } = require("./Data/projectSlugs");
 // ^ adjust path if your folder is different
 
 /** @type {import('next-sitemap').IConfig} */

@@ -9,6 +9,7 @@ import Image from "next/image";
 import CaseBlock from "@/Snippet/CaseBlock";
 import Stars from "@/Snippet/Stars";
 import Ending from "@/Components/Section/Ending";
+import Head from "next/head";
 
 const Id = () => {
     const router = useRouter();
@@ -55,6 +56,9 @@ const Id = () => {
 
     return (
         <>
+            <Head>
+                <link rel="canonical" href="https://abedin.online/projects" />
+            </Head>
             <Layout>
                 <div className="max-w-5xl mx-auto p-6">
                     {/* Breadcrumb */}

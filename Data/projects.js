@@ -1,4 +1,4 @@
-import cro from '../Images/cro.png'
+import cro from '../Images/CRO.png'
 import casep from '../Images/Case.png'
 import full from '../Images/Full.png'
 import nex from '../Images/nex.png'

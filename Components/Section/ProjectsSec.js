@@ -4,10 +4,10 @@ import FlexWarp from '@/Snippet/FlexWarp'
 import { Heading } from '@/Snippet/Typograph'
 import React from 'react'
 
-const ProjectsSec = () => {
+const ProjectsSec = ({ heading = "Projects" }) => {
     return (
         <>
-            <Heading cls="text-center animate-on-scroll animate-fade-up">Projects</Heading>
+            <Heading cls="text-center mt-2 sm:mt-4 animate-on-scroll animate-fade-up">{heading}</Heading>
             <FlexWarp className="p-4 gap-6 sm:gap-8">
                 {
                     projects &&
@@ -24,7 +24,8 @@ const ProjectsSec = () => {
                             meta={el.role || ""}
                             tags={el.tools || []}
                             footerlink={el.link ? "View Project" : ""}
-                            href={el.link || ""}
+                            // href={el.link || ""}
+                            href={`/projects/${el.title}`}
                             onClick={""}
                         />
 

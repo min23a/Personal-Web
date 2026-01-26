@@ -25,7 +25,7 @@ const ProjectsSec = ({ heading = "Projects" }) => {
                             tags={el.tools || []}
                             footerlink={el.link ? "View Project" : ""}
                             // href={el.link || ""}
-                            href={`/projects/${el.title}`}
+                            href={`/projects/${el.slug}`}
                             onClick={""}
                         />
 

@@ -17,7 +17,7 @@ const index = () => {
     return (
         <>
             <SEO path="projects" data={seoMap.projects} />
-            <JsonLd data={schema.home} />
+            <JsonLd data={schema.projects} />
             <Layout>
                 <Pagewidth>
                     <Breadcrumb />

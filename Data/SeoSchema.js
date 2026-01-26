@@ -146,5 +146,29 @@ export const schema = {
                 { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://abedin.online/contact" }
             ]
         }
+    ],
+    projects: [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://abedin.online/projects/#webpage",
+            "url": "https://abedin.online/projects",
+            "name": "Projects — Md Minhazul Abedin",
+            "isPartOf": { "@id": "https://abedin.online/#website" },
+            "about": { "@id": "https://abedin.online/#person" },
+            "inLanguage": "en",
+            "description":
+                "Portfolio of Shopify development projects and case studies by Md Minhazul Abedin."
+        },
+
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://abedin.online/projects/#breadcrumbs",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://abedin.online/" },
+                { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://abedin.online/projects" }
+            ]
+        }
     ]
 };

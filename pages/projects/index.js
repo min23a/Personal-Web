@@ -26,7 +26,7 @@ const index = () => {
             <Layout>
                 <Pagewidth>
                     <Breadcrumb />
-                    <ProjectsSec heading='Projects I Have done' />
+                    <ProjectsSec heading='Projects I Have Done' />
                     <Ending />
                 </Pagewidth>
             </Layout>

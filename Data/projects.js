@@ -1,11 +1,11 @@
-import cro from '@/Images/CRO.png'
-import casep from '@/Images/Case.png'
-import full from '@/Images/Full.png'
-import nex from '@/Images/nex.png'
-import sec from '@/Images/sections.png'
-import starter from '@/Images/starter.png'
-import web from '@/Images/web.png'
-import ai from '@/Images/ai.png'
+import cro from '../Images/cro.png'
+import casep from '../Images/Case.png'
+import full from '../Images/Full.png'
+import nex from '../Images/nex.png'
+import sec from '../Images/sections.png'
+import starter from '../Images/starter.png'
+import web from '../Images/web.png'
+import ai from '../Images/ai.png'
 
 export const projects = [
     {

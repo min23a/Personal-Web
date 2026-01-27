@@ -29,13 +29,13 @@ const AboutMe = () => {
                     </div>
                 </ImageWithText>
                 <ImageWithText>
-                    <div className='w-full sm:w-[50%] h-auto content-center  animate-on-scroll animate-fade-left'>
+                    <div className='w-full sm:w-[50%] h-auto content-center animate-on-scroll animate-fade-left'>
                         <SubHeading>As a Developer:</SubHeading>
                         <p className='text-[18px] sm:text-[20px] lg:text-[22px] text-left m-auto mb-3 sm:mb-6'>
                             {data.shopify_desc}
                         </p>
                     </div>
-                    <div className='w-full sm:w-[50%] h-auto  animate-on-scroll animate-fade-right'>
+                    <div className='w-full sm:w-[50%] h-auto animate-on-scroll animate-fade-right items-center'>
                         <Image priority="false" src={img1} alt="" className="w-full" />
                     </div>
                 </ImageWithText>

@@ -10,6 +10,9 @@ import CaseBlock from "@/Snippet/CaseBlock";
 import Stars from "@/Snippet/Stars";
 import Ending from "@/Components/Section/Ending";
 import Head from "next/head";
+import SEO from "@/Snippet/SEO";
+import JsonLd from "@/Components/JsonLd";
+import { buildProjectSchema } from "@/Data/SeoSchema";
 
 const Id = () => {
     const router = useRouter();
@@ -52,13 +55,21 @@ const Id = () => {
         );
     }
 
+    const schemaArr = buildProjectSchema({
+        slug: project.slug,
+        title: project.title,
+        description: project.description,
+        image: project.photo || "",
+        datePublished: project.datePublished,
+        dateModified: project.dateModified,
+    });
+
     const hasTools = Array.isArray(project.tools) && project.tools.length > 0;
 
     return (
         <>
-            <Head>
-                <link rel="canonical" href="https://abedin.online/projects" />
-            </Head>
+            <SEO path={`projects`} data={project} />
+            <JsonLd data={schemaArr} />
             <Layout>
                 <div className="max-w-5xl mx-auto p-6">
                     {/* Breadcrumb */}
@@ -193,7 +204,6 @@ const Id = () => {
           )} */}
                 </div>
 
-                <Ending></Ending>
             </Layout>
         </>
     );

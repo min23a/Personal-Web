@@ -1,13 +1,12 @@
+import Footer from '@/Components/Footer'
 import HirePage from '@/Components/HirePage'
 import JsonLd from '@/Components/JsonLd'
 import Navigation from '@/Components/Navigation'
-import Announcement from '@/Components/Section/Announcement'
 import Ending from '@/Components/Section/Ending'
 import { hireDetails } from '@/Data/Hiredetails'
+import { seoMap } from '@/Data/seoMap'
 import { schema } from '@/Data/SeoSchema'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Head from 'next/head'
+import SEO from '@/Snippet/SEO'
 import React, { createContext } from 'react'
 
 export const HireDetails = createContext();
@@ -15,14 +14,7 @@ export const HireDetails = createContext();
 const contact = () => {
     return (
         <>
-            <Head>
-                <title>{`${hireDetails.title} - Contact`}</title>
-                <meta property="og:title" content={hireDetails.title} key="title" />
-                <meta name="description" key="description" content={hireDetails.meta_desc} />
-                <meta name="keywords" content={hireDetails.tag} />
-                <Analytics />
-                <SpeedInsights />
-            </Head>
+            <SEO path="contact" data={seoMap.contact} />
             <JsonLd data={schema.contact} />
             <HireDetails.Provider value={hireDetails}>
                 <main>
@@ -32,10 +24,10 @@ const contact = () => {
 
                     <section className='w-[80vw] m-auto max-w-[1200px]'>
                         <HirePage />
-                        <Ending />
                     </section>
                 </main>
             </HireDetails.Provider>
+            <Footer />
         </>
     )
 }

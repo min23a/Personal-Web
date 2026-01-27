@@ -14,7 +14,7 @@ const ProjectsSec = ({ heading = "Projects" }) => {
                     projects.map((el, index) => (
                         <Card
                             key={index}
-                            className="text-white animate-on-scroll animate-fade-up bg-secondary rounded-2xl shadow-lg shadow-indigo-500/50 hover:scale-[1.02] transition-transform duration-300 w-full sm:w-[30%] max-w-sm"
+                            className="text-white animate-on-scroll animate-fade-up bg-secondary rounded-2xl shadow-lg shadow-indigo-500/50 hover:scale-[1.02] transition-transform duration-300 sm:w-[30%] max-w-sm"
                             image={el.photo}
                             title={el.title}
                             subtitle={el.type || ""}

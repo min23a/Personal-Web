@@ -8,18 +8,14 @@ import { getUserProfile, getRepos } from "@/services/git";
 import JsonLd from "@/Components/JsonLd";
 import { schema } from "@/Data/SeoSchema";
 import Ending from "@/Components/Section/Ending";
+import SEO from "@/Snippet/SEO";
+import { seoMap } from "@/Data/seoMap";
+import Footer from "@/Components/Footer";
 
 export default function Project({ profile, repositories }) {
     return (
         <>
-            <Head>
-                <title>{`${personalData.name} - GIT`}</title>
-                <meta property="og:title" content={personalData.name} key="title" />
-                <meta name="description" key="description" content={personalData.meta} />
-                <meta name="keywords" content={personalData.tags} />
-                <Analytics />
-                <SpeedInsights />
-            </Head>
+            <SEO path="git" data={seoMap.git} />
             <JsonLd data={schema.git} />
 
             <main>
@@ -30,8 +26,8 @@ export default function Project({ profile, repositories }) {
                 <section className="w-[80vw] m-auto max-w-[1200px]">
                     {/* Pass the data down to your Projects component */}
                     <Projects profile={profile} repositories={repositories} />
-                    <Ending />
                 </section>
+                <Footer />
             </main>
         </>
     );

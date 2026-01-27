@@ -3,8 +3,10 @@ import Layout from '@/Components/Layout';
 import About from '@/Components/Section/AboutMe';
 import Ending from '@/Components/Section/Ending';
 import { personalData } from '@/Data/PersonalData';
+import { seoMap } from '@/Data/seoMap';
 import { schema } from '@/Data/SeoSchema';
 import Pagewidth from '@/Snippet/Pagewidth';
+import SEO from '@/Snippet/SEO';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Head from 'next/head';
@@ -16,19 +18,11 @@ const about = () => {
 
     return (
         <>
-            <Head>
-                <title>{`${personalData.name} - About`}</title>
-                <meta property="og:title" content={personalData.name} key="title" />
-                <meta name="description" key="description" content={personalData.meta} />
-                <meta name="keywords" content={personalData.tags} />
-                <Analytics />
-                <SpeedInsights />
-            </Head>
+            <SEO path="about" data={seoMap.about} />
             <JsonLd data={schema.about} />
             <Layout>
                 <Pagewidth>
                     <About></About>
-                    <Ending />
                 </Pagewidth>
             </Layout>
         </>

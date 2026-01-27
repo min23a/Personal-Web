@@ -7,7 +7,7 @@ const Ending = ({ cls }) => {
         <>
             <div className={`w-full sm:max-w-[1200px] p-3 flex items-center justify-center gap-3 m-auto ${cls}`}>
                 <FontAwesomeIcon icon={faCopyright} width={"15px"} className='w-[25px] sm:w-[15px]' />
-                <span>This website was build by Md Minhazul Abedin. Copyright 2026.</span>
+                <span>{new Date().getFullYear()} Md Minhazul Abedin. All rights reserved.</span>
             </div>
         </>
     )

@@ -170,5 +170,152 @@ export const schema = {
                 { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://abedin.online/projects" }
             ]
         }
-    ]
+    ],
+
 };
+
+const BASE = "https://abedin.online";
+
+export const ids = {
+    person: `${BASE}/#person`,
+    website: `${BASE}/#website`,
+};
+
+export function buildBreadcrumbs({ url, items }) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumbs`,
+        itemListElement: items.map((it, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            name: it.name,
+            item: it.item,
+        })),
+    };
+}
+
+export function buildWebPage({ url, name, description }) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        isPartOf: { "@id": ids.website },
+        about: { "@id": ids.person },
+        inLanguage: "en",
+    };
+}
+
+export function buildProjectSchema({ slug, title, description, image, datePublished, dateModified }) {
+    const url = `${BASE}/projects/${slug}`;
+
+    // Project as CreativeWork (best for portfolio projects)
+    const project = {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "@id": `${url}#project`,
+        url,
+        name: title,
+        description,
+        image: image ? [image] : undefined,
+        author: { "@id": ids.person },
+        publisher: { "@id": ids.person },
+        datePublished: datePublished || undefined,
+        dateModified: dateModified || undefined,
+    };
+
+    const webpage = buildWebPage({
+        url,
+        name: `${title} — Project | Md Minhazul Abedin`,
+        description,
+    });
+
+    const breadcrumbs = buildBreadcrumbs({
+        url,
+        items: [
+            { name: "Home", item: `${BASE}/` },
+            { name: "Projects", item: `${BASE}/projects` },
+            { name: title, item: url },
+        ],
+    });
+
+    // Return array like your existing schema object
+    return [webpage, project, breadcrumbs].map(cleanUndefined);
+}
+
+export function buildBlogArticleSchema({ slug, title, description, image, datePublished, dateModified }) {
+    const url = `${BASE}/blog/${slug}`;
+
+    const article = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: title,
+        description,
+        image: image ? [image] : undefined,
+        author: { "@id": ids.person },
+        publisher: { "@id": ids.person },
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+        datePublished,
+        dateModified: dateModified || datePublished,
+    };
+
+    const webpage = buildWebPage({
+        url,
+        name: `${title} — Blog | Md Minhazul Abedin`,
+        description,
+    });
+
+    const breadcrumbs = buildBreadcrumbs({
+        url,
+        items: [
+            { name: "Home", item: `${BASE}/` },
+            { name: "Blog", item: `${BASE}/blog` },
+            { name: title, item: url },
+        ],
+    });
+
+    return [webpage, article, breadcrumbs].map(cleanUndefined);
+}
+
+export function buildLocationServiceSchema({ country, title, description }) {
+    const slug = country.toLowerCase().replace(/\s+/g, "-");
+    const url = `${BASE}/shopify-developer-in-${slug}`;
+
+    const webpage = buildWebPage({
+        url,
+        name: `${title} | Abedin`,
+        description,
+    });
+
+    const service = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: title,
+        description,
+        provider: { "@id": ids.person },
+        areaServed: country,
+        url,
+    };
+
+    const breadcrumbs = buildBreadcrumbs({
+        url,
+        items: [
+            { name: "Home", item: `${BASE}/` },
+            { name: "Hire", item: `${BASE}/hire-shopify-developer` },
+            { name: country, item: url },
+        ],
+    });
+
+    return [webpage, service, breadcrumbs].map(cleanUndefined);
+}
+
+function cleanUndefined(obj) {
+    // remove undefined keys (keeps schema clean)
+    return JSON.parse(JSON.stringify(obj));
+}
+

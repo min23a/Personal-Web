@@ -18,7 +18,6 @@ const Hompage = () => {
                 <AboutMe />
                 <Skills />
                 <UpworkReviews cls="bg-black rounded-xl my-2 sm:my-4 lg:my-6 shadow-lg shadow-indigo-500/20 py-8 px-5 animate-on-scroll animate-fade-up text-white" reviews={upworkReviews} />
-                <Ending />
             </Pagewidth>
         </>
     )

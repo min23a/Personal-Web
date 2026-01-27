@@ -66,7 +66,7 @@ const UpworkReviews = ({
 
                         {r.date ? (
                             <p className="mt-3 text-xs ">
-                                {new Date(r.date).toLocaleDateString()}
+                                {r.date}
                             </p>
                         ) : null}
                     </article>

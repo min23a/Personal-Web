@@ -3,19 +3,25 @@ import DesktopNav from '@/Snippet/DesktopNav'
 import MobileNav from '@/Snippet/MobileNav'
 
 const Navigation = () => {
-    const [size, setSize] = useState(768)
+    const [size, setSize] = useState(null)
 
-    let screen = 768;
+    useEffect(() => {
+        // Set initial size on client-side only
+        setSize(window.innerWidth)
 
-    if (typeof window !== "undefined") {
-        screen = window.screen.width;
+        // Update on window resize
+        const handleResize = () => {
+            setSize(window.innerWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    // While size is null (hydration), render nothing or a neutral component
+    if (size === null) {
+        return <div className="h-[60px]" /> // Placeholder to prevent layout shift
     }
-
-    useEffect(
-        () => {
-            setSize(screen)
-        }, [screen]
-    )
 
     return (
         <>

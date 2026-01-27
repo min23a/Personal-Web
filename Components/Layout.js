@@ -1,6 +1,7 @@
 import { personalData } from '@/Data/PersonalData'
 import React, { createContext } from 'react'
 import Navigation from './Navigation'
+import Footer from './Footer';
 
 export const DetailsContext = createContext();
 
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
                         {children}
                     </section>
                 </DetailsContext.Provider>
+                <Footer />
             </main>
         </>
     )

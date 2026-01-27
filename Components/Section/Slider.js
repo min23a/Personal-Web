@@ -209,7 +209,7 @@ export default function Slider({
                             type="button"
                             onClick={onClickPrev}
                             disabled={!canPrev}
-                            className={`absolute left-[-5%] top-1/2 -translate-y-1/2 h-10 w-10 rounded-full backdrop-blur flex items-center justify-center shadow
+                            className={`absolute left-[-5%] top-1/2 -translate-y-1/2 h-10 w-10 rounded-full flex items-center justify-center shadow
               ${!canPrev ? "opacity-40 cursor-not-allowed" : ""}`}
                             aria-label="Previous slide"
                         >
@@ -220,7 +220,7 @@ export default function Slider({
                             type="button"
                             onClick={onClickNext}
                             disabled={!canNext}
-                            className={`absolute right-[-5%] top-1/2 -translate-y-1/2 h-10 w-10 rounded-full backdrop-blur flex items-center justify-center shadow
+                            className={`absolute right-[-5%] top-1/2 -translate-y-1/2 h-10 w-10 rounded-full flex items-center justify-center shadow
               ${!canNext ? "opacity-40 cursor-not-allowed" : ""}`}
                             aria-label="Next slide"
                         >

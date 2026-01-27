@@ -1,8 +1,6 @@
 import JsonLd from '@/Components/JsonLd'
 import Layout from '@/Components/Layout'
-import Ending from '@/Components/Section/Ending'
 import ProjectsSec from '@/Components/Section/ProjectsSec'
-import { personalData } from '@/Data/PersonalData'
 import { seoMap } from '@/Data/seoMap'
 import { schema } from '@/Data/SeoSchema'
 import Breadcrumb from '@/Snippet/Breadcrumb'

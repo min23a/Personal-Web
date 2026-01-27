@@ -9,6 +9,7 @@ import { personalData } from '@/Data/PersonalData'
 const DesktopNav = () => {
     const menu = menulist.list;
     const ext = menulist.external;
+    const seo = menulist.seo;
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
     return (
         <>
@@ -36,6 +37,14 @@ const DesktopNav = () => {
                                 {x}
                             </Link>
                         )) : ""
+                    }
+                    {
+                        seo ?
+                            seo.map((x, index) => (
+                                <Link key={index} href={"/" + x.link}
+                                    className={link_cls}
+                                >{x.title}</Link>
+                            )) : ""
                     }
                 </div>
                 <div className='menu-icons w-[30%}'>

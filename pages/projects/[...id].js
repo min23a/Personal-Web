@@ -8,8 +8,6 @@ import { Heading } from "@/Snippet/Typograph";
 import Image from "next/image";
 import CaseBlock from "@/Snippet/CaseBlock";
 import Stars from "@/Snippet/Stars";
-import Ending from "@/Components/Section/Ending";
-import Head from "next/head";
 import SEO from "@/Snippet/SEO";
 import JsonLd from "@/Components/JsonLd";
 import { buildProjectSchema } from "@/Data/SeoSchema";

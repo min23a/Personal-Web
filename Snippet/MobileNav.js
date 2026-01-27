@@ -12,6 +12,7 @@ const MobileNav = () => {
 
     const menu = menulist.list;
     const ext = menulist.external;
+    const seo = menulist.seo;
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
 
     const changeStat = () => {
@@ -59,6 +60,14 @@ const MobileNav = () => {
                             {x}
                         </Link>
                     )) : ""
+                }
+                {
+                    seo ?
+                        seo.map((x, index) => (
+                            <Link key={index} href={"/" + x.link}
+                                className={link_cls}
+                            >{x.title}</Link>
+                        )) : ""
                 }
                 <div className='menu-icons w-[80%} '>
                     <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">

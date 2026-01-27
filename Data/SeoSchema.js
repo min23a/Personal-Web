@@ -171,6 +171,95 @@ export const schema = {
             ]
         }
     ],
+    hirePage: [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://abedin.online/hire-shopify-developer/#webpage",
+            "url": "https://abedin.online/hire-shopify-developer",
+            "name": "Hire Shopify Developer | Md Minhazul Abedin",
+            "isPartOf": { "@id": "https://abedin.online/#website" },
+            "about": { "@id": "https://abedin.online/#person" },
+            "inLanguage": "en",
+            "description":
+                "Hire Md Minhazul Abedin, a skilled Shopify developer specializing in custom theme development, performance optimization, and e-commerce solutions."
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://abedin.online/hire-shopify-developer/#breadcrumbs",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://abedin.online/" },
+                { "@type": "ListItem", "position": 2, "name": "Hire Shopify Developer", "item": "https://abedin.online/hire-shopify-developer" }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://abedin.online/hire-shopify-developer/#service",
+            "name": "Hire Shopify Developer | Md Minhazul Abedin",
+            "description":
+                "Hire Md Minhazul Abedin, a skilled Shopify developer specializing in custom theme development, performance optimization, and e-commerce solutions.",
+            "provider": { "@id": "https://abedin.online/#person" },
+            "areaServed": "Worldwide",
+            "url": "https://abedin.online/hire-shopify-developer"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPoint",
+            "@id": "https://abedin.online/hire-shopify-developer/#contactpoint",
+            "contactType": "sales",
+            "email": "mailto:minhaz.buft191@gmail.com",
+            "availableLanguage": ["en"]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://abedin.online/hire-shopify-developer/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What Shopify work do you handle?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Theme customization, Online Store 2.0 sections, Liquid/JS enhancements, performance optimization, and CRO-focused UX improvements for product and collection pages."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you work with Dawn and Shopify 2.0 themes?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. I build upgrade-safe customizations using OS 2.0 sections/snippets and Shopify-native patterns whenever possible."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you improve my store speed without ruining design?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. The approach is to keep the UI intact while reducing render-blocking assets, optimizing images, minimizing heavy scripts, and simplifying Liquid rendering paths."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you replace apps with custom code?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "When it makes sense. If an app is slowing the store or adding recurring cost, I can often replace it with a lightweight section or snippet—while keeping maintainability in mind."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do we start?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Send your store URL and what you want to improve. If you already know the scope, include examples, pages, or screenshots—then I’ll propose the fastest route to results."
+                    }
+                }
+            ]
+        }
+    ]
 
 };
 

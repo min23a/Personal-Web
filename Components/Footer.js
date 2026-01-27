@@ -11,10 +11,10 @@ import Ending from './Section/Ending'
 const Footer = () => {
     const menu = menulist.list;
     const ext = menulist.external;
-    const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
+    const link_cls = 'uppercase m-[10px] transition-[text-decoration] ease-in-out delay-[1.5s] hover:underline hover:underline-offset-4 ';
     return (
         <>
-            <footer className="bg-gradient-to-t from-indigo-500 via-purple-500 to-gray-500 text-white py-6 mt-12">
+            <footer className="bg-gradient-to-t from-indigo-500 via-purple-500 to-gray-500 text-white py-6 mt-24">
                 <Pagewidth>
                     <nav className="flex flex-col sm:flex-row justify-between items-start">
                         <div>
@@ -44,7 +44,7 @@ const Footer = () => {
                                 }
                             </div>
                         </div>
-                        <div className='menu-icons w-[30%}'>
+                        <div className='menu-icons w-[30%] flex justify-end items-center gap-6'>
                             <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} className='m-2 scale-150 hover:scale-175 transition-transform cursor-pointer' />
                             </Link>

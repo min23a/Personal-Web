@@ -5,6 +5,10 @@ export const menulist = {
         {
             title: "hire",
             link: "hire-shopify-developer"
+        },
+        {
+            title: "shopify developer",
+            link: "shopify-developer"
         }
     ]
 }

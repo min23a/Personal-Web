@@ -202,7 +202,49 @@ export const schema = {
                 "Hire Md Minhazul Abedin, a skilled Shopify developer specializing in custom theme development, performance optimization, and e-commerce solutions.",
             "provider": { "@id": "https://abedin.online/#person" },
             "areaServed": "Worldwide",
-            "url": "https://abedin.online/hire-shopify-developer"
+            "url": "https://abedin.online/hire-shopify-developer",
+            "mainEntity": [
+                {
+                    "@type": "Service",
+                    "name": "Shopify Theme Customization (Dawn + OS 2.0)",
+                    "description": {
+                        "@type": "Details",
+                        "text": "Pixel-clean edits to existing themes, section upgrades, and layout improvements without breaking Shopify updates."
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Custom Sections (App-free features)",
+                    "description": {
+                        "@type": "Details",
+                        "text": "Reusable OS 2.0 sections like bundles, breadcrumbs, advanced UI blocks, and marketing sections—built for speed."
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Performance Optimization (Core Web Vitals)",
+                    "description": {
+                        "@type": "Details",
+                        "text": "Improve LCP/INP/CLS by reducing render-blocking Liquid, optimizing assets, and cleaning frontend execution."
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Product & Collection UX Improvements",
+                    "description": {
+                        "@type": "Details",
+                        "text": "Better product discovery, cleaner PDP/collection layouts, and navigation improvements that support conversion."
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Shopify Front-end Features (JS / AJAX)",
+                    "description": {
+                        "@type": "Details",
+                        "text": "Dynamic behaviors like filtering, sliders, UI enhancements—implemented responsibly with minimal bloat."
+                    }
+                }
+            ]
         },
         {
             "@context": "https://schema.org",
@@ -210,7 +252,9 @@ export const schema = {
             "@id": "https://abedin.online/hire-shopify-developer/#contactpoint",
             "contactType": "sales",
             "email": "mailto:minhaz.buft191@gmail.com",
-            "availableLanguage": ["en"]
+            "availableLanguage": ["en"],
+            "areaServed": "Worldwide",
+            "mainEntityOfPage": { "@id": "https://abedin.online/hire-shopify-developer/#contact" }
         },
         {
             "@context": "https://schema.org",
@@ -255,6 +299,94 @@ export const schema = {
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Send your store URL and what you want to improve. If you already know the scope, include examples, pages, or screenshots—then I’ll propose the fastest route to results."
+                    }
+                }
+            ]
+        }
+    ],
+    ShopifyDeveloper: [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://abedin.online/shopify-developer/#webpage",
+            "url": "https://abedin.online/shopify-developer",
+            "name": "Shopify Developer | Theme, OS 2.0, Speed & CRO",
+            "isPartOf": { "@id": "https://abedin.online/#website" },
+            "about": { "@id": "https://abedin.online/#person" },
+            "inLanguage": "en",
+            "description":
+                "Shopify developer specializing in Online Store 2.0, Liquid theme customization, performance optimization, and CRO-focused storefront improvements. See projects and hire."
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://abedin.online/shopify-developer/#breadcrumbs",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://abedin.online/" },
+                { "@type": "ListItem", "position": 2, "name": "Shopify Developer", "item": "https://abedin.online/shopify-developer" }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "@id": "https://abedin.online/shopify-developer/#article",
+            "headline": "Shopify Developer | Theme, OS 2.0, Speed & CRO",
+            "description":
+                "Shopify developer specializing in Online Store 2.0, Liquid theme customization, performance optimization, and CRO-focused storefront improvements. See projects and hire.",
+            "author": { "@id": "https://abedin.online/#person" },
+            "publisher": { "@id": "https://abedin.online/#person" },
+            "mainEntityOfPage": { "@id": "https://abedin.online/shopify-developer/#webpage" }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Skills",
+            "@id": "https://abedin.online/shopify-developer/#skils",
+            "skill": [
+                "Shopify Theme Development",
+                "Liquid Templating",
+                "Online Store 2.0",
+                "Performance Optimization",
+                "Core Web Vitals",
+                "Conversion Rate Optimization (CRO)",
+                "JavaScript & Front-end Enhancements",
+                "E-commerce UX Improvements"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://abedin.online/shopify-developer/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is the difference between a Shopify developer and a Shopify expert?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A Shopify developer focuses on theme code, Online Store 2.0 architecture, and front-end implementation (Liquid, JS, HTML/CSS). Many “experts” focus more on strategy or apps. I work mainly on code-level improvements that impact speed, UX, and maintainability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you work with my existing theme?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Most work is done directly on an existing theme (Dawn or other OS 2.0 themes), with upgrade-safe patterns so you can keep improving without rebuilding everything."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you build custom sections instead of apps?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "When it’s a good fit. If the feature is UI/UX-focused and doesn’t require a complex backend, a custom OS 2.0 section is often faster, cheaper long-term, and better for performance."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I get started?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Go to the hire page and send your store URL, the pages you want improved, and your goals (speed, layout, sections, or conversion). I’ll reply with a plan and the fastest route to results."
                     }
                 }
             ]

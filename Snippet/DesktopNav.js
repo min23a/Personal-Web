@@ -3,13 +3,13 @@ import { menulist } from '@/Data/Menulist'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { personalData } from '@/Data/PersonalData'
+import Dropdown from './Dropdown'
 
 const DesktopNav = () => {
     const menu = menulist.list;
     const ext = menulist.external;
-    const seo = menulist.seo;
     const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
     return (
         <>
@@ -19,7 +19,7 @@ const DesktopNav = () => {
                         Abedin
                     </h1>
                 </Link>
-                <div className='m-3'>
+                <div className='m-3 flex-1 flex justify-center items-center w-full relative'>
                     {menu ?
                         menu.map((x, index) => (
                             <Link key={index} href={x === "home" ? "/" : "#" + x}
@@ -39,15 +39,24 @@ const DesktopNav = () => {
                         )) : ""
                     }
                     {
-                        seo ?
-                            seo.map((x, index) => (
-                                <Link key={index} href={"/" + x.link}
-                                    className={link_cls}
-                                >{x.title}</Link>
-                            )) : ""
+                        menulist.blog ?
+                            menulist.blog.subMenu ?
+                                <div className='group dropdown p-3'>
+                                    <span className={link_cls + ' cursor-pointer'}>
+                                        {menulist.blog.title}
+                                        <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm group-hover:rotate-180 transition-all' />
+                                    </span>
+                                    <div className='absolute top-[40px] left-[0px] w-full hidden group-hover:block bg-gradient-to-t from-black to-gray-800 shadow-lg rounded-md z-10'>
+                                        <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
+                                    </div>
+                                </div>
+                                : <Link href={`/${menulist.blog.link}`} className={link_cls}>
+                                    {menulist.blog.title}
+                                </Link>
+                            : ""
                     }
                 </div>
-                <div className='menu-icons w-[30%}'>
+                <div className='menu-icons'>
                     <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
                     </Link>

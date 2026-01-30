@@ -4,7 +4,7 @@ import SEO from "@/Snippet/SEO";
 import Layout from "@/Components/Layout";
 import { Heading } from "@/Snippet/Typograph";
 import Accordion from "@/Snippet/Accordion";
-import { buildBlogArticleSchema, schema } from "@/Data/SeoSchema";
+import { schema } from "@/Data/SeoSchema";
 import JsonLd from "@/Components/JsonLd";
 
 const HireShopifyDeveloper = () => {
@@ -104,10 +104,6 @@ const HireShopifyDeveloper = () => {
                 "Send your store URL and what you want to improve. If you already know the scope, include examples, pages, or screenshots—then I’ll propose the fastest route to results.",
         },
     ];
-
-    const schemaArr = buildBlogArticleSchema({
-
-    })
 
     return (
         <>

@@ -5,6 +5,7 @@ import Ending from '@/Components/Section/Ending';
 import { personalData } from '@/Data/PersonalData';
 import { seoMap } from '@/Data/seoMap';
 import { schema } from '@/Data/SeoSchema';
+import Breadcrumb from '@/Snippet/Breadcrumb';
 import Pagewidth from '@/Snippet/Pagewidth';
 import SEO from '@/Snippet/SEO';
 import { Analytics } from '@vercel/analytics/react';
@@ -22,6 +23,7 @@ const about = () => {
             <JsonLd data={schema.about} />
             <Layout>
                 <Pagewidth>
+                    <Breadcrumb />
                     <About></About>
                 </Pagewidth>
             </Layout>

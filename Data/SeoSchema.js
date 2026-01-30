@@ -399,7 +399,40 @@ export const schema = {
                 }
             ]
         }
+    ],
+    FreelanceShopifyDeveloper: [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://abedin.online/freelance-shopify-developer/#webpage",
+            "url": "https://abedin.online/freelance-shopify-developer",
+            "name": "Freelance Shopify Developer | Fast Execution for Store Growth",
+            "isPartOf": { "@id": "https://abedin.online/#website" },
+            "about": { "@id": "https://abedin.online/#person" },
+            "inLanguage": "en",
+            "description": "Freelance Shopify developer for OS 2.0 theme customization, custom sections, and speed optimization. Flexible collaboration, clear deliverables, and upgrade-safe code."
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://abedin.online/freelance-shopify-developer/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://abedin.online/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Freelance Shopify Developer",
+                    "item": "https://abedin.online/freelance-shopify-developer"
+                }
+            ]
+        }
     ]
+
 
 };
 

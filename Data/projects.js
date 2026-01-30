@@ -20,22 +20,22 @@ export const projects = [
             {
                 title: "Problem",
                 body:
-                    "The existing storefront lacked a strong brand identity and suffered from inconsistent UI components across pages.\n\nHeavy third-party apps, inefficient Liquid logic, and unoptimized assets negatively impacted Core Web Vitals and conversion flow."
+                    "The existing storefront lacked a strong brand identity and suffered from inconsistent UI components across pages.\n\nHeavy third-party apps, inefficient Liquid logic, and unoptimized assets negatively impacted Core Web Vitals and conversion flow.\n\n Users faced layout shifts, slow load times, and confusing navigation. The LCP and INP metrics were greater than 5 seconds. which hurt SEO and user experience.Also because of the speed issues, bounce rates were high and conversion rates were low. Branding inconsistencies led to a lack of trust and professionalism."
             },
             {
                 title: "Solution",
                 body:
-                    "Redesigned homepage and product page architecture using Shopify Online Store 2.0.\n\nBuilt modular custom sections, refactored Liquid templates, optimized asset loading, and replaced app-based features with lightweight native implementations."
+                    "Redesigned homepage and product page architecture using Shopify Online Store 2.0.\n\nBuilt modular custom sections, refactored Liquid templates, optimized asset loading, and replaced app-based features with lightweight native implementations. Most crucially LCP (Largest Contentful Paint) and INP (Interaction to Next Paint) were optimized to be under 2.5 seconds.\n\nEstablished a consistent brand system with standardized typography, color schemes, and UI components across the site. \n\nImproved navigation clarity and product presentation to enhance user flow and reduce bounce rates."
             },
             {
                 title: "Impact",
                 body:
-                    "Improved visual hierarchy, reduced layout shifts, and created a flexible UI system.\n\nPerformance improvements led to smoother interactions and better scalability for future features."
+                    "Improved visual hierarchy, reduced layout shifts, and created a flexible UI system.\n\nPerformance improvements led to smoother interactions and better scalability for future features.\n\nEnhanced user trust through consistent branding and clearer product presentation, leading to higher engagement and conversion rates. Most importantly, Core Web Vitals saw significant improvements, with LCP reduced to under 2.5 seconds and INP also optimized to enhance overall user experience. The Video banner and other images were delivering in next-gen formats like WebP and AVIF, further boosting load times. \n\nIt was done using the liquid code and Shopify's native image optimization features."
             },
             {
                 title: "Result",
                 body:
-                    "Delivered a faster, cleaner, and more maintainable storefront.\n\nThe brand gained a scalable theme architecture with improved UX and reduced technical debt."
+                    "Delivered a faster, cleaner, and more maintainable storefront.\n\nThe brand gained a scalable theme architecture with improved UX and reduced technical debt.\n\nThe consistent brand system fostered greater user trust and professionalism, resulting in increased conversion rates and customer loyalty."
             }
         ],
 
@@ -43,12 +43,12 @@ export const projects = [
             {
                 title: "Theme Architecture",
                 body:
-                    "Rebuilt the theme around OS 2.0 sections and reusable snippets to ensure modularity and upgrade safety.\n\nSimplified Liquid rendering to reduce redundant loops and improve readability."
+                    "Rebuilt the theme around OS 2.0 sections and reusable snippets to ensure modularity and upgrade safety.\n\nSimplified Liquid rendering to reduce redundant loops and improve readability. Shopify's native image optimization features were leveraged to serve images in next-gen formats like WebP and AVIF, significantly enhancing load times."
             },
             {
                 title: "Performance Strategy",
                 body:
-                    "Implemented responsive image loading, deferred scripts, and minimized CSS.\n\nJavaScript features were isolated to load only when necessary, reducing main-thread workload."
+                    "Implemented responsive image loading, deferred scripts, and minimized CSS.\n\nJavaScript features were isolated to load only when necessary, reducing main-thread workload. Prefetching and prioritization techniques were applied to critical assets to improve LCP and INP metrics."
             }
         ],
 
@@ -86,17 +86,17 @@ export const projects = [
             {
                 title: "Problem",
                 body:
-                    "The storefront lacked a unified design system, resulting in inconsistent typography, spacing, and layout patterns.\n\nNavigation and product presentation were not optimized for user flow."
+                    "The storefront lacked a unified design system, resulting in inconsistent typography, spacing, and layout patterns.\n\nNavigation and product presentation were not optimized for user flow. Also, they were using old Shopify theme which was not supporting Online Store 2.0 features. More over, the existing design was built with third party apps which were slowing down the site performance and increasing technical debt."
             },
             {
                 title: "Solution",
                 body:
-                    "Introduced a consistent UI system with standardized typography, spacing, and component patterns.\n\nRedesigned product cards and navigation structure while maintaining Shopify theme compatibility."
+                    "Introduced a consistent UI system with standardized typography, spacing, and component patterns.\n\nRedesigned product cards and navigation structure while maintaining Shopify theme compatibility. Refactored Liquid templates to improve maintainability and performance. Also, replaced heavy third-party apps with lightweight native implementations to enhance site speed and reduce technical debt. From a performance standpoint, optimized asset loading and minimized CSS and JavaScript to improve Core Web Vitals."
             },
             {
                 title: "Impact",
                 body:
-                    "Improved visual consistency and user navigation.\n\nEnhanced readability and product discoverability across pages."
+                    "Improved visual consistency and user navigation.\n\nEnhanced readability and product discoverability across pages. \n\nThe performance optimizations led to faster load times and smoother interactions, contributing to a better overall user experience."
             },
             {
                 title: "Result",

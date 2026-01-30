@@ -11,7 +11,7 @@ import Ending from './Section/Ending'
 const Footer = () => {
     const menu = menulist.list;
     const ext = menulist.external;
-    const seo = menulist.seo;
+    const seo = menulist.blog.subMenu;
     const link_cls = 'uppercase m-[10px] transition-[text-decoration] ease-in-out delay-[1.5s] hover:underline hover:underline-offset-4 ';
     return (
         <>
@@ -49,10 +49,11 @@ const Footer = () => {
                             {
                                 seo ?
                                     seo.map((x, index) => (
-                                        <Link key={index} href={"/" + x.link}
-                                            className={link_cls}
-                                        >{x.link}</Link>
-                                    )) : ""
+                                        <Link key={index} href={`/${x.link}`} className={link_cls}>
+                                            {x.title}
+                                        </Link>
+                                    ))
+                                    : ""
                             }
                         </div>
                         <div className='menu-icons w-[30%] flex justify-end items-center gap-6'>

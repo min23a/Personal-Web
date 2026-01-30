@@ -2,18 +2,33 @@ import { menulist } from '@/Data/Menulist';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronDown, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { handleDisplay } from './Show';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { personalData } from '@/Data/PersonalData';
+import Dropdown from './Dropdown';
 
 const MobileNav = () => {
     const [x, setX] = useState("bar")
 
     const menu = menulist.list;
     const ext = menulist.external;
-    const seo = menulist.seo;
-    const link_cls = 'uppercase m-[10px] transition ease-in-out delay-[1.5s] hover:font-bold';
+    const link_cls = 'uppercase m-[10px] w-full transition ease-in-out delay-[1.5s] hover:font-bold';
+
+    const handleclick = () => {
+        const dropdown = document.querySelector('.dropdown');
+        const arrow = document.querySelector('.dropdown-arrow');
+        const menu = dropdown.querySelector('div');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.style.maxHeight = menu.scrollHeight + "px";
+            arrow.classList.add('rotate-180');
+        } else {
+            menu.classList.add('hidden');
+            menu.style.maxHeight = null;
+            arrow.classList.remove('rotate-180');
+        }
+    }
 
     const changeStat = () => {
         const id = document.getElementById("menu_m");
@@ -62,14 +77,23 @@ const MobileNav = () => {
                     )) : ""
                 }
                 {
-                    seo ?
-                        seo.map((x, index) => (
-                            <Link key={index} href={"/" + x.link}
-                                className={link_cls}
-                            >{x.title}</Link>
-                        )) : ""
+                    menulist.blog ?
+                        menulist.blog.subMenu ?
+                            <div onClick={handleclick} className={link_cls + ' cursor-pointer dropdown relative'}>
+                                <span>
+                                    {menulist.blog.title}
+                                    <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
+                                </span>
+                                <div className='max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[0px] w-full hidden'>
+                                    <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
+                                </div>
+                            </div>
+                            : <Link href={`/${menulist.blog.link}`} className={link_cls}>
+                                {menulist.blog.title}
+                            </Link>
+                        : ""
                 }
-                <div className='menu-icons w-[80%} '>
+                <div className='menu-icons '>
                     <Link href={`https://github.com/${process.env.GITHUB_USERNAME || personalData.github}`} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} className='m-2 hover:scale-125 transition-transform cursor-pointer' />
                     </Link>

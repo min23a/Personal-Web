@@ -6,6 +6,7 @@ import Ending from '@/Components/Section/Ending'
 import { hireDetails } from '@/Data/Hiredetails'
 import { seoMap } from '@/Data/seoMap'
 import { schema } from '@/Data/SeoSchema'
+import Breadcrumb from '@/Snippet/Breadcrumb'
 import SEO from '@/Snippet/SEO'
 import React, { createContext } from 'react'
 
@@ -23,6 +24,7 @@ const contact = () => {
                     </section>
 
                     <section className='w-[80vw] m-auto max-w-[1200px]'>
+                        <Breadcrumb />
                         <HirePage />
                     </section>
                 </main>

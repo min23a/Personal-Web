@@ -11,6 +11,7 @@ import Ending from "@/Components/Section/Ending";
 import SEO from "@/Snippet/SEO";
 import { seoMap } from "@/Data/seoMap";
 import Footer from "@/Components/Footer";
+import Breadcrumb from "@/Snippet/Breadcrumb";
 
 export default function Project({ profile, repositories }) {
     return (
@@ -24,6 +25,7 @@ export default function Project({ profile, repositories }) {
                 </section>
 
                 <section className="w-[80vw] m-auto max-w-[1200px]">
+                    <Breadcrumb />
                     {/* Pass the data down to your Projects component */}
                     <Projects profile={profile} repositories={repositories} />
                 </section>

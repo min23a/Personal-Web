@@ -1,14 +1,15 @@
+import { blogs } from "@/Data/Blogs"
+
 export const menulist = {
     "list": ["home"],
     "external": ["about", "projects", "git", "contact"],
-    seo: [
-        {
-            title: "hire",
-            link: "hire-shopify-developer"
-        },
-        {
-            title: "shopify developer",
-            link: "shopify-developer"
-        }
-    ]
+    blog: {
+        title: "Articles",
+        link: "blogs",
+        subMenu:
+            blogs.map(blog => ({
+                title: blog.slug,
+                link: `${blog.slug}`
+            }))
+    }
 }

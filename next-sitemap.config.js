@@ -21,7 +21,7 @@ module.exports = {
 
         return projectSlugs.map((slug) => ({
             loc: `/projects/${slug}`,
-            changefreq: "monthly",
+            changefreq: "weekly",
             priority: 0.8,
             lastmod: now,
         }));

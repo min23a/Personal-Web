@@ -152,25 +152,25 @@ const Id = () => {
 
                             <div className="mt-6 flex flex-wrap gap-3">
                                 {project.link ? (
-                                    <a
+                                    <Link
                                         href={project.link}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="px-4 py-2 rounded-full border hover:bg-white hover:shadow-md hover:text-black transition duration-400"
                                     >
                                         Live demo
-                                    </a>
+                                    </Link>
                                 ) : null}
 
                                 {project.repo ? (
-                                    <a
+                                    <Link
                                         href={project.repo}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="px-4 py-2 rounded-full border hover:bg-white hover:shadow-md hover:text-black transition duration-400"
                                     >
                                         GitHub
-                                    </a>
+                                    </Link>
                                 ) : null}
                             </div>
 

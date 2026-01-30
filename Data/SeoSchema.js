@@ -100,7 +100,15 @@ export const schema = {
             "about": { "@id": "https://abedin.online/#person" },
             "inLanguage": "en",
             "description":
-                "GitHub profile and repositories of Md Minhazul Abedin (@min23a)."
+                "GitHub profile and repositories of Md Minhazul Abedin (@min23a).",
+            "mainEntity": {
+                "@type": "Person",
+                "name": "Md Minhazul Abedin",
+                "url": "https://abedin.online/git",
+                "about": "GitHub profile and repositories of Md Minhazul Abedin (@min23a).",
+                "sameAs": "https://github.com/min23a",
+
+            }
         },
         {
             "@context": "https://schema.org",

@@ -11,7 +11,7 @@ import Ending from './Section/Ending'
 const Footer = () => {
     const menu = menulist.list;
     const ext = menulist.external;
-    const seo = menulist.blog.subMenu;
+    const seo = menulist.authorityPage;
     const link_cls = 'uppercase m-[10px] transition-[text-decoration] ease-in-out delay-[1.5s] hover:underline hover:underline-offset-4 ';
     return (
         <>

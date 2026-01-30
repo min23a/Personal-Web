@@ -1,4 +1,5 @@
 import { blogs } from "@/Data/Blogs"
+import { authorityPages } from "./AuthorityPages"
 
 export const menulist = {
     "list": ["home"],
@@ -11,5 +12,11 @@ export const menulist = {
                 title: blog.slug,
                 link: `${blog.slug}`
             }))
-    }
+    },
+    authorityPage:
+        authorityPages.map(page => ({
+            title: page.slug,
+            link: `${page.slug}`
+        }))
+
 }

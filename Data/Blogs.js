@@ -1,421 +1,224 @@
 export const blogs = [
     {
-        slug: "shopify-developer",
-        type: "page-article",
+        slug: "what-is-shopify-developer",
+        type: "blog-article",
         seo: {
-            title: "Shopify Developer | OS 2.0, Liquid, Speed Optimization & CRO",
+            title: "What Is a Shopify Developer? Role, Skills & When You Need One",
             description:
-                "Learn what a Shopify developer does and why it matters for store performance, UX, and conversions. See how I build OS 2.0 sections, optimize speed, and ship upgrade-safe theme work.",
-            canonical: "https://abedin.online/shopify-developer",
+                "Learn what a Shopify developer does, what problems they solve, and when hiring one makes sense for your store. Clear explanations, real examples, and practical guidance.",
+            canonical: "https://abedin.online/what-is-shopify-developer",
             tags: [
-                "Shopify Developer",
-                "Shopify Liquid",
+                "What is a Shopify Developer",
+                "Shopify Developer Role",
+                "Shopify Theme Development",
                 "Online Store 2.0",
-                "Shopify Theme Customization",
-                "Core Web Vitals",
-                "Shopify CRO",
+                "Shopify Performance Optimization"
             ],
-            datePublished: "2025-12-15",
-            dateModified: "2026-01-28",
-            readingTime: "6 min read",
+            datePublished: "2026-01-30",
+            dateModified: "2026-01-30",
+            readingTime: "7 min read"
         },
 
         hero: {
-            h1: "Shopify Developer",
+            h1: "What Is a Shopify Developer?",
             intro:
-                "A Shopify developer builds and improves Shopify storefronts by customizing themes, creating Online Store 2.0 sections, and optimizing speed and user experience. The goal isn’t just “design changes”—it’s building a store that loads fast, feels premium, and stays maintainable as your catalog, traffic, and marketing needs grow.",
+                "A Shopify developer is responsible for building, customizing, and improving Shopify storefronts beyond what standard themes and apps can provide. This role focuses on theme code, Online Store 2.0 sections, performance optimization, and front-end user experience—ensuring a store not only looks good, but loads fast, converts well, and remains maintainable as the business grows.",
             primaryCta: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
-            secondaryCta: { label: "View Projects", href: "/projects" },
+            secondaryCta: { label: "View Projects", href: "/projects" }
         },
 
         sections: [
             {
-                id: "what-is",
-                title: "What does a Shopify developer do?",
+                id: "definition",
+                title: "What does a Shopify developer actually do?",
                 body:
-                    "A Shopify developer works on the part of your store customers actually experience: the theme, layout, templates, and interactions. This includes Liquid templates, OS 2.0 sections, and frontend code that controls navigation, product pages, collections, and content.\n\nA strong developer doesn’t just “make it look good.” They make your store easy to use, fast to load, and stable for future updates. That means reducing unnecessary scripts, improving Core Web Vitals, building reusable components, and keeping edits upgrade-safe so your theme can evolve without breaking every few months.",
+                    "A Shopify developer works on the technical layer of a Shopify store that customers interact with every day. This includes theme templates written in Liquid, Online Store 2.0 sections, JavaScript-powered interactions, and layout logic across product, collection, and content pages.\n\nUnlike basic store setup, development work focuses on solving real problems: slow load times, rigid layouts, poor mobile UX, app overload, or conversion friction. The goal is to turn a generic Shopify store into a fast, scalable storefront tailored to a brand’s needs."
             },
             {
-                id: "skills",
-                title: "Skills & responsibilities (what I typically handle)",
+                id: "responsibilities",
+                title: "Core responsibilities of a Shopify developer",
                 list: [
                     {
-                        title: "Theme customization and layout improvements",
+                        title: "Theme customization and layout control",
                         desc:
-                            "Implement pixel-accurate UI changes across homepage, collection, product, and content templates while keeping the theme upgrade-safe.",
+                            "Modifying existing themes (such as Dawn or other OS 2.0 themes) to match brand design, improve layout consistency, and support custom content structures."
                     },
                     {
-                        title: "Online Store 2.0 sections and reusable components",
+                        title: "Online Store 2.0 section development",
                         desc:
-                            "Build configurable sections and snippets that reduce app dependency, improve page speed, and allow non-technical updates from the Shopify editor.",
-                    },
-                    {
-                        title: "Performance optimization (Core Web Vitals)",
-                        desc:
-                            "Improve LCP, INP, and CLS by optimizing assets, cleaning Liquid render paths, reducing heavy scripts, and stabilizing layout behavior.",
-                    },
-                    {
-                        title: "Conversion-focused UX on product & collection pages",
-                        desc:
-                            "Refine PDP and collection UX for clarity, better product discovery, stronger information hierarchy, and fewer friction points.",
-                    },
-                    {
-                        title: "Safe deployment and maintainable handover",
-                        desc:
-                            "Ship changes with QA, cross-device checks, and clear structure so the store can keep evolving without fragile code.",
-                    },
-                ],
-            },
-            {
-                id: "tools",
-                title: "Tools & technologies used in Shopify development",
-                body:
-                    "Modern Shopify development is a mix of Shopify-native architecture and careful frontend decisions. The goal is to ship features that look premium without adding performance debt.\n\nThese are the core tools I use to build scalable storefronts:",
-                list: [
-                    { title: "Shopify Liquid", desc: "Theme templates, sections, snippets, and upgrade-safe rendering patterns." },
-                    { title: "Online Store 2.0", desc: "Modular section architecture and dynamic templates for scalable storefronts." },
-                    { title: "JavaScript (ES6)", desc: "UI behaviors, AJAX rendering, and interaction features with minimal bloat." },
-                    { title: "HTML + CSS", desc: "Clean structure, responsive layout, and consistent UI systems." },
-                    { title: "Performance mindset", desc: "Core Web Vitals discipline: reduce render blocking and main-thread work." },
-                    { title: "Git workflow", desc: "Clean iteration, safe rollbacks, and structured delivery for production sites." },
-                ],
-            },
-            {
-                id: "difference",
-                title: "What makes my approach different",
-                body:
-                    "Many stores become slow because new features are added without a system. My approach is designed to scale: upgrade-safe theme work, performance-first decisions, and reusable OS 2.0 components.\n\nThat means you get improvements today without paying a “maintenance tax” later.",
-                list: [
-                    {
-                        title: "Upgrade-safe theme work",
-                        desc:
-                            "I avoid fragile hacks and keep changes aligned with OS 2.0 patterns so future Shopify updates don’t become a nightmare.",
-                    },
-                    {
-                        title: "Performance and CRO together",
-                        desc:
-                            "Speed matters, but so does clarity. I optimize for both: fast rendering and a clean user journey toward purchase.",
-                    },
-                    {
-                        title: "App-free where it’s smarter",
-                        desc:
-                            "If an app slows the store or adds recurring costs, I can often replace it with a lightweight section or snippet.",
-                    },
-                    {
-                        title: "Reusable components, not one-off edits",
-                        desc:
-                            "I build systems: sections and patterns you can reuse across pages and future campaigns without rebuilding everything.",
-                    },
-                ],
-            },
-        ],
-
-        cta: {
-            title: "Need a Shopify developer for your store?",
-            desc:
-                "If your store needs OS 2.0 sections, performance improvements, or conversion-focused UI upgrades, the hire page explains my services and process clearly.",
-            button: { label: "Hire Page", href: "/hire-shopify-developer" },
-        },
-
-        faq: {
-            enabled: true,
-            title: "FAQ",
-            items: [
-                {
-                    q: "What is the difference between a Shopify developer and a Shopify expert?",
-                    a:
-                        "A Shopify developer focuses on theme code, OS 2.0 architecture, and front-end implementation (Liquid, JS, HTML/CSS). Many “experts” focus more on strategy or apps. I work mainly on code-level improvements that impact speed, UX, and maintainability.",
-                },
-                {
-                    q: "Can you work with my existing theme?",
-                    a:
-                        "Yes. Most work is done directly on an existing theme (Dawn or other OS 2.0 themes), with upgrade-safe patterns so you can keep improving without rebuilding everything.",
-                },
-                {
-                    q: "Do you build custom sections instead of apps?",
-                    a:
-                        "When it’s a good fit. If the feature is UI/UX-focused and doesn’t require a complex backend, a custom OS 2.0 section is often faster, cheaper long-term, and better for performance.",
-                },
-                {
-                    q: "How do I get started?",
-                    a:
-                        "Go to the hire page and send your store URL, the pages you want improved, and your goals (speed, layout, sections, or conversion).",
-                },
-            ],
-        },
-
-        internalLinks: {
-            title: "Explore more",
-            items: [
-                { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
-                { label: "Freelance Shopify Developer", href: "/freelance-shopify-developer" },
-                { label: "Projects", href: "/projects" },
-                { label: "About", href: "/about" },
-                { label: "Contact", href: "/contact" },
-            ],
-        },
-    },
-
-    {
-        slug: "hire-shopify-developer",
-        type: "page-article",
-        seo: {
-            title: "Hire Shopify Developer | Fast, Upgrade-Safe Theme Work (OS 2.0)",
-            description:
-                "Hire a Shopify developer for OS 2.0 theme customization, custom sections, speed optimization, and CRO-focused storefront improvements. Clear process, clean code, and reliable delivery.",
-            canonical: "https://abedin.online/hire-shopify-developer",
-            tags: [
-                "Hire Shopify Developer",
-                "Shopify Theme Customization",
-                "Online Store 2.0 Sections",
-                "Shopify Performance Optimization",
-                "Shopify CRO",
-            ],
-            datePublished: "2025-12-18",
-            dateModified: "2026-01-28",
-            readingTime: "7 min read",
-        },
-
-        hero: {
-            h1: "Hire Shopify Developer",
-            intro:
-                "If your Shopify store needs clean theme customization, OS 2.0 sections, performance improvements, or conversion-focused UI upgrades, this page outlines a straightforward way to work together. The focus is fast delivery, upgrade-safe structure, and measurable improvements to how your storefront feels and performs.",
-            primaryCta: { label: "Contact / Start a project", href: "/contact" },
-            secondaryCta: { label: "View Projects", href: "/projects" },
-        },
-
-        sections: [
-            {
-                id: "services",
-                title: "Services (what I can build and improve)",
-                body:
-                    "This is outcome-focused Shopify development. I build features that improve speed, clarity, and maintainability—without adding unnecessary app bloat.\n\nCommon client requests include:",
-                list: [
-                    {
-                        title: "Shopify Theme Customization (Dawn + OS 2.0)",
-                        desc:
-                            "Pixel-clean edits to existing themes, section upgrades, and layout improvements without breaking Shopify updates.",
-                    },
-                    {
-                        title: "Custom Sections (App-free features)",
-                        desc:
-                            "Reusable OS 2.0 sections like bundles, breadcrumbs, advanced UI blocks, and marketing sections—built for speed.",
-                    },
-                    {
-                        title: "Performance Optimization (Core Web Vitals)",
-                        desc:
-                            "Improve LCP/INP/CLS by reducing render-blocking Liquid, optimizing assets, and cleaning frontend execution.",
-                    },
-                    {
-                        title: "Product & Collection UX Improvements",
-                        desc:
-                            "Better product discovery, cleaner PDP/collection layouts, and navigation improvements that support conversion.",
-                    },
-                    {
-                        title: "Shopify Front-end Features (JS / AJAX)",
-                        desc:
-                            "Dynamic behaviors like filtering, sliders, UI enhancements—implemented responsibly with minimal bloat.",
-                    },
-                ],
-            },
-            {
-                id: "process",
-                title: "Process (how we work)",
-                body:
-                    "Shopify work goes best when it’s clear, iterative, and safe. My process keeps you in control while ensuring quality delivery.",
-                list: [
-                    {
-                        title: "1) Quick audit",
-                        desc:
-                            "You share your store URL + goals. I review theme structure, performance bottlenecks, and UX opportunities.",
-                    },
-                    {
-                        title: "2) Clear plan + estimate",
-                        desc:
-                            "I propose the approach (safe theme edits vs custom sections), timeline, and what success looks like.",
-                    },
-                    {
-                        title: "3) Build & iterate",
-                        desc:
-                            "Work is delivered in small checkpoints so you can review fast. Clean code + upgrade-safe structure.",
-                    },
-                    {
-                        title: "4) QA + launch",
-                        desc:
-                            "Cross-device testing, performance checks, and deployment with rollback safety.",
-                    },
-                    {
-                        title: "5) Handover",
-                        desc:
-                            "Short documentation so your team can maintain, extend, and ship future updates confidently.",
-                    },
-                ],
-            },
-            {
-                id: "proof",
-                title: "Proof and examples",
-                body:
-                    "If you want to validate my style before reaching out, the projects page contains real work examples and case-study style breakdowns.\n\nYou can also explore the supporting topic page below (freelance intent) to see how I approach Shopify work as an independent developer.",
-            },
-        ],
-
-        cta: {
-            title: "Want a clear plan for your Shopify store?",
-            desc:
-                "Send your store URL and what you want improved (speed, sections, layout, PDP/collection UX). I’ll reply with the fastest route to results.",
-            button: { label: "Go to Contact", href: "/contact" },
-        },
-
-        faq: {
-            enabled: true,
-            title: "FAQ",
-            items: [
-                {
-                    q: "What Shopify work do you handle?",
-                    a:
-                        "Theme customization, Online Store 2.0 sections, Liquid/JS enhancements, performance optimization, and CRO-focused UX improvements for product and collection pages.",
-                },
-                {
-                    q: "Do you work with Dawn and Shopify 2.0 themes?",
-                    a:
-                        "Yes. I build upgrade-safe customizations using OS 2.0 sections/snippets and Shopify-native patterns whenever possible.",
-                },
-                {
-                    q: "Can you improve my store speed without ruining design?",
-                    a:
-                        "Yes. The goal is to keep the UI intact while reducing render-blocking assets, optimizing images, minimizing heavy scripts, and simplifying Liquid rendering paths.",
-                },
-                {
-                    q: "Do you replace apps with custom code?",
-                    a:
-                        "When it makes sense. If an app is slowing the store or adding recurring cost, I can often replace it with a lightweight section or snippet.",
-                },
-                {
-                    q: "How do we start?",
-                    a:
-                        "Send your store URL and what you want to improve. If you already know the scope, include example pages or screenshots.",
-                },
-            ],
-        },
-
-        internalLinks: {
-            title: "Explore more",
-            items: [
-                { label: "Shopify Developer", href: "/shopify-developer" },
-                { label: "Freelance Shopify Developer", href: "/freelance-shopify-developer" },
-                { label: "Projects", href: "/projects" },
-                { label: "About", href: "/about" },
-                { label: "Contact", href: "/contact" },
-            ],
-        },
-    },
-
-    {
-        slug: "freelance-shopify-developer",
-        type: "support-page",
-        seo: {
-            title: "Freelance Shopify Developer | Fast Execution for Store Growth",
-            description:
-                "Freelance Shopify developer for OS 2.0 theme customization, custom sections, and speed optimization. Flexible collaboration, clear deliverables, and upgrade-safe code.",
-            canonical: "https://abedin.online/freelance-shopify-developer",
-            tags: [
-                "Freelance Shopify Developer",
-                "Shopify Developer Freelancer",
-                "Online Store 2.0",
-                "Liquid Theme Developer",
-                "Shopify Speed Optimization",
-            ],
-            datePublished: "2026-01-29",
-            dateModified: "2026-01-29",
-            readingTime: "6 min read",
-        },
-
-        hero: {
-            h1: "Freelance Shopify Developer",
-            intro:
-                "A freelance Shopify developer is a flexible way to improve your storefront without the overhead of hiring full-time. I work independently with Shopify store owners and teams to ship OS 2.0 sections, theme improvements, and performance-focused upgrades. The focus is fast execution, clean code, and a storefront that stays maintainable as your marketing and product strategy evolves.",
-            primaryCta: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
-            secondaryCta: { label: "View Projects", href: "/projects" },
-        },
-
-        sections: [
-            {
-                id: "why",
-                title: "Why hire a freelance Shopify developer",
-                body:
-                    "Freelance Shopify development is ideal when you need expert execution with a clear outcome—like building a new OS 2.0 section, improving product page UX, or optimizing performance. You get direct communication, fast iteration, and a tighter feedback loop compared to high-overhead delivery models.\n\nIt also helps when you want work done in focused sprints. Many stores need strong improvements in short windows (campaign launches, seasonal collections, site redesign upgrades). A freelance model fits that reality: implement changes quickly, test properly, and keep the storefront stable.",
-            },
-            {
-                id: "work",
-                title: "Types of Shopify work I handle",
-                body:
-                    "I specialize in front-end Shopify development that impacts customer experience, speed, and conversion clarity. Common freelance requests include:",
-                list: [
-                    {
-                        title: "Theme customization (Dawn + OS 2.0)",
-                        desc:
-                            "Upgrade-safe theme edits across homepage, product, collection, and content templates—delivered with clean, maintainable structure.",
-                    },
-                    {
-                        title: "Custom sections (app-free features)",
-                        desc:
-                            "Reusable OS 2.0 sections such as landing blocks, bundles, breadcrumbs, and marketing components built to be editable in the theme editor.",
+                            "Building reusable, configurable sections that merchants can edit directly in the Shopify theme editor without touching code."
                     },
                     {
                         title: "Performance optimization",
                         desc:
-                            "Core Web Vitals improvements through asset optimization, render-path cleanup, and responsible JavaScript usage—especially important on mobile.",
+                            "Improving Core Web Vitals by optimizing assets, simplifying Liquid rendering, and reducing unnecessary JavaScript execution."
                     },
                     {
-                        title: "PDP and collection UX improvements",
+                        title: "Conversion-focused UX improvements",
                         desc:
-                            "Better layout consistency, improved product discovery, and clearer information hierarchy that supports conversion decisions.",
+                            "Refining product and collection pages to improve clarity, product discovery, and user flow toward purchase."
                     },
-                ],
+                    {
+                        title: "Maintainable and upgrade-safe delivery",
+                        desc:
+                            "Ensuring code remains compatible with Shopify updates so future changes don’t require rebuilding the entire theme."
+                    }
+                ]
             },
             {
-                id: "collaboration",
-                title: "How clients usually work with me",
+                id: "when-needed",
+                title: "When do you actually need a Shopify developer?",
                 body:
-                    "Most projects start with a store URL and a short goal statement. From there, I propose a plan, estimate, and the safest implementation approach. Work is delivered in checkpoints so you can review early and adjust direction.\n\nI keep development organized and upgrade-safe, test across breakpoints, and ensure changes don’t break Shopify editor behavior. When the work is done, I provide a short handover note so your team can maintain and extend it.",
-                list: [
-                    {
-                        title: "Sprint-based delivery",
-                        desc:
-                            "Small iterations with quick review cycles—ideal for stores that want fast improvement without long timelines.",
-                    },
-                    {
-                        title: "Direct communication",
-                        desc:
-                            "You work with the person implementing the changes, which reduces miscommunication and speeds up delivery.",
-                    },
-                    {
-                        title: "Maintainable outcomes",
-                        desc:
-                            "The work is structured so future features and campaigns can be added without slowing down the store.",
-                    },
-                ],
+                    "Not every Shopify store needs a developer on day one. However, development becomes important once a store starts growing or hitting limitations.\n\nYou likely need a Shopify developer if your store feels slow, relies heavily on apps, struggles with mobile UX, or needs custom sections that themes don’t support out of the box. Development work is especially valuable before major campaigns, redesigns, or international expansion."
             },
+            {
+                id: "developer-vs-expert",
+                title: "Shopify developer vs Shopify expert",
+                body:
+                    "The term “Shopify expert” is often used broadly. A Shopify developer, however, focuses specifically on code-level improvements: Liquid templates, OS 2.0 sections, performance tuning, and front-end architecture.\n\nIf your challenge involves layout flexibility, speed, or maintainability, a developer is usually the right role. Strategy and marketing decisions can follow—but the technical foundation must be solid first."
+            }
         ],
 
         cta: {
-            title: "If you’re ready, the hire page shows everything clearly",
+            title: "Thinking about improving your Shopify store?",
             desc:
-                "The hire page covers services, process, and what to send so I can estimate quickly. If you want to move fast, start there.",
-            button: { label: "Go to Hire Page", href: "/hire-shopify-developer" },
+                "If your store needs better performance, custom sections, or conversion-focused UI improvements, the hire page explains how I work and what to send to get started.",
+            button: { label: "Go to Hire", href: "/hire-shopify-developer" }
         },
 
-        // Day 6 requirement: NO FAQ schema, NO Service schema
-        faq: { enabled: false, title: "", items: [] },
+        faq: {
+            enabled: false,
+            title: "",
+            items: []
+        },
 
         internalLinks: {
-            title: "Explore more",
+            title: "Related resources",
             items: [
                 { label: "Shopify Developer", href: "/shopify-developer" },
-                { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
+                { label: "Freelance Shopify Developer", href: "/freelance-shopify-developer" },
                 { label: "Projects", href: "/projects" },
-                { label: "Contact", href: "/contact" },
-            ],
-        },
+                { label: "Contact", href: "/contact" }
+            ]
+        }
     },
+    {
+        slug: "how-to-hire-shopify-developer",
+        type: "blog-article",
+        seo: {
+            title: "How to Hire a Shopify Developer (Checklist + Common Mistakes)",
+            description:
+                "A practical guide on how to hire a Shopify developer: what to look for, questions to ask, red flags to avoid, and how to choose the right fit for your store.",
+            canonical: "https://abedin.online/how-to-hire-shopify-developer",
+            tags: [
+                "How to Hire Shopify Developer",
+                "Shopify Developer Hiring Guide",
+                "Shopify Freelancer",
+                "Shopify Theme Customization",
+                "Shopify Performance"
+            ],
+            datePublished: "2026-01-30",
+            dateModified: "2026-01-30",
+            readingTime: "8 min read"
+        },
+
+        hero: {
+            h1: "How to Hire a Shopify Developer",
+            intro:
+                "Hiring the right Shopify developer can significantly impact your store’s speed, usability, and long-term stability. This guide explains how to evaluate developers, what questions to ask, and how to avoid common hiring mistakes—so you get results instead of technical debt.",
+            primaryCta: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
+            secondaryCta: { label: "View Projects", href: "/projects" }
+        },
+
+        sections: [
+            {
+                id: "why-hiring-matters",
+                title: "Why hiring the right Shopify developer matters",
+                body:
+                    "Shopify stores often become slow or fragile not because of the platform, but because of how features are added over time. Poorly implemented apps, rushed theme edits, and non-upgrade-safe code can hurt performance and increase long-term costs.\n\nA good Shopify developer doesn’t just ship features—they protect your store’s future by keeping the codebase clean, fast, and flexible."
+            },
+            {
+                id: "what-to-look-for",
+                title: "What to look for when hiring a Shopify developer",
+                list: [
+                    {
+                        title: "Experience with Online Store 2.0",
+                        desc:
+                            "A strong developer understands OS 2.0 architecture, section-based templates, and how to keep edits upgrade-safe."
+                    },
+                    {
+                        title: "Performance awareness",
+                        desc:
+                            "They should talk about Core Web Vitals, asset optimization, and reducing render-blocking behavior—not just visuals."
+                    },
+                    {
+                        title: "Real project examples",
+                        desc:
+                            "Look for concrete examples of Shopify stores they’ve worked on, ideally with explanations of what was improved."
+                    },
+                    {
+                        title: "Clear communication",
+                        desc:
+                            "You should understand what will be changed, why it matters, and how success will be measured."
+                    }
+                ]
+            },
+            {
+                id: "questions",
+                title: "Questions you should ask before hiring",
+                body:
+                    "Before committing, ask questions that reveal how the developer thinks—not just what tools they use.\n\nGood questions include how they handle theme updates, performance trade-offs, and app replacements. The answers will quickly show whether they focus on short-term fixes or long-term solutions."
+            },
+            {
+                id: "common-mistakes",
+                title: "Common mistakes store owners make",
+                list: [
+                    {
+                        title: "Choosing based on price alone",
+                        desc:
+                            "Cheap work often leads to performance issues, rework, and higher costs later."
+                    },
+                    {
+                        title: "Over-reliance on apps",
+                        desc:
+                            "Many features can be built as lightweight sections instead of adding multiple apps that slow the store."
+                    },
+                    {
+                        title: "No clear scope or outcome",
+                        desc:
+                            "Without defined goals (speed, UX, conversion), it’s hard to evaluate success."
+                    }
+                ]
+            },
+            {
+                id: "freelance-vs-agency",
+                title: "Freelance developer vs agency",
+                body:
+                    "Freelance Shopify developers are often a good fit for focused, execution-driven work. You communicate directly with the person building the solution, timelines are shorter, and overhead is lower.\n\nAgencies can be useful for large multi-disciplinary projects, but for theme customization, OS 2.0 sections, and performance work, a skilled freelancer often delivers faster and more cost-effective results."
+            }
+        ],
+
+        cta: {
+            title: "Ready to hire a Shopify developer?",
+            desc:
+                "If you want a clear plan, clean code, and reliable delivery, the hire page outlines services, process, and what to send to get started.",
+            button: { label: "Go to Hire", href: "/hire-shopify-developer" }
+        },
+
+        faq: {
+            enabled: false,
+            title: "",
+            items: []
+        },
+
+        internalLinks: {
+            title: "Related resources",
+            items: [
+                { label: "Shopify Developer", href: "/shopify-developer" },
+                { label: "Freelance Shopify Developer", href: "/freelance-shopify-developer" },
+                { label: "Projects", href: "/projects" },
+                { label: "Contact", href: "/contact" }
+            ]
+        }
+    }
 ];

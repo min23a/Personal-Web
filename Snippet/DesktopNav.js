@@ -42,10 +42,10 @@ const DesktopNav = () => {
                         menulist.blog ?
                             menulist.blog.subMenu ?
                                 <div className='group dropdown p-3'>
-                                    <span className={link_cls + ' cursor-pointer'}>
+                                    <Link href={`/${menulist.blog.link}`} className={link_cls + ' cursor-pointer'}>
                                         {menulist.blog.title}
                                         <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm group-hover:rotate-180 transition-all' />
-                                    </span>
+                                    </Link>
                                     <div className='absolute top-[40px] left-[0px] w-full hidden group-hover:block bg-gradient-to-t from-black to-gray-800 shadow-lg rounded-md z-10'>
                                         <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
                                     </div>

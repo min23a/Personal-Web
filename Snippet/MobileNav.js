@@ -80,10 +80,10 @@ const MobileNav = () => {
                     menulist.blog ?
                         menulist.blog.subMenu ?
                             <div onClick={handleclick} className={link_cls + ' cursor-pointer dropdown relative'}>
-                                <span>
+                                <Link href={`/${menulist.blog.link}`} >
                                     {menulist.blog.title}
                                     <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
-                                </span>
+                                </Link>
                                 <div className='max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[0px] w-full hidden'>
                                     <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
                                 </div>

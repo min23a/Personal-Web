@@ -545,7 +545,7 @@ export function buildBlogArticleSchema({ slug, title, description, image, datePu
 
 export function buildLocationServiceSchema({ country, title, description }) {
     const slug = country.toLowerCase().replace(/\s+/g, "-");
-    const url = `${BASE}/shopify-developer-in-${slug}`;
+    const url = `${BASE}/shopify-developer-in/${slug}`;
 
     const webpage = buildWebPage({
         url,

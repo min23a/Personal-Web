@@ -10,7 +10,6 @@ export const ids = {
  * Works with your existing blog data structure
  */
 export function buildBlogSchema(blog) {
-    console.log(blog)
     if (!blog?.slug) return [];
 
     const url = `${BASE}/${blog.slug}`;

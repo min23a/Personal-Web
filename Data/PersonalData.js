@@ -1,11 +1,13 @@
 
 import { expert } from '@/Data/Expert';
 
+const currentYear = new Date().getFullYear();
+
 export const personalData = {
     name: "Md. Minhazul Abedin",
     github: "min23a",
     main_subtitle: ["Professional Shopify Expert", "Front-end Developer", "MERN Stack Developer", "Merchandiser",],
-    main_desc: "A results-oriented merchandising professional with a BSc in Apparel Manufacturing Technology from BGMEA University of Fashion & Technology. With 11 months of industry experience—gained through an internship at FCI (BD) Ltd. and a Trainee Merchandiser role at Softex Sweater Industries Pvt. Ltd.—I have developed a strong ability to manage buyer relationships and navigate the complex demands of the apparel supply chain. With hands-on approach and keen industry insight contribute to streamlined operations and measurable business growth.",
+    main_desc: `I am self-aspired and result driven Shopify Expert and MERN Stack Developer with a strong background in apparel merchandising. With over ${currentYear - 2021} years of experience in Shopify theme development and 11 months in the apparel industry, I bring a unique blend of technical expertise and industry insight to deliver high-performance e-commerce solutions. My skills include custom Shopify theme development, Liquid programming, JavaScript, React, Node.js, and effective merchandising strategies. I am passionate about creating seamless online shopping experiences that drive business growth and customer satisfaction.`,
     mer_sub: "Merchandiser || BSc in Apparel Manufacturing & Technology",
     shopify_sub: "Professional Shopify Expert & MERN Stack Developer.",
     common_desc: "In today’s fast-moving eCommerce landscape, Shopify powers high-performance, conversion-focused storefronts worldwide. With a BSc in Apparel Manufacturing Technology and a background in merchandising, I bring a unique blend of industry insight and front-end expertise to Shopify theme development. My experience bridges product strategy and performance-driven design, allowing me to build fast, scalable, and brand-aligned Shopify themes that deliver real business results.",

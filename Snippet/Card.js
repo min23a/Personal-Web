@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Stars from "./Stars";
 import { Heading, SubHeading } from "./Typograph";
+import Link from "next/link";
 
 /**
  * Reusable Card
@@ -45,9 +46,9 @@ const Card = ({
 
         if (href) {
             return (
-                <a href={href} className={`${common} ${clickable ? "cursor-pointer" : ""}`}>
+                <Link href={href} className={`${common} ${clickable ? "cursor-pointer" : ""}`}>
                     {children}
-                </a>
+                </Link>
             );
         }
 

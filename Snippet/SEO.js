@@ -10,7 +10,7 @@ const SEO = ({ path = "", data }) => {
             <meta property="og:title" content={data.title} key="title" />
             <meta name="description" key="description" content={data.meta || data.detailed_desc || data.description} />
             {
-                data.tags ? <meta name="keywords" content={data.tags.join(", ")} /> : data.tools ? <meta name="keywords" content={data.tools.join(", ")} /> : null
+                data.tags ? <meta name="keywords" content={data.tags} /> : data.tools ? <meta name="keywords" content={data.tools.join(", ")} /> : null
             }
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href={`https://abedin.online/${path}`} />

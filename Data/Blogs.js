@@ -76,7 +76,28 @@ export const blogs = [
                 title: "Shopify developer vs Shopify expert",
                 body:
                     "The term “Shopify expert” is often used broadly. A Shopify developer, however, focuses specifically on code-level improvements: Liquid templates, OS 2.0 sections, performance tuning, and front-end architecture.\n\nIf your challenge involves layout flexibility, speed, or maintainability, a developer is usually the right role. Strategy and marketing decisions can follow—but the technical foundation must be solid first."
-            }
+            },
+            {
+                id: "common-mistakes",
+                title: "Common mistakes everyone makes",
+                list: [
+                    {
+                        title: "hiring general dev instead of Shopify dev",
+                        desc:
+                            "Cheap dev who never worked with shopify often leads to performance issues, rework, and higher costs later."
+                    },
+                    {
+                        title: "Adding too many apps",
+                        desc:
+                            "Extreme reliance on apps can bloat your store and slow it down. Many features can be built as lightweight sections instead."
+                    },
+                    {
+                        title: "Editing theme without structure",
+                        desc:
+                            "structured approach is important. Without defined goals (speed, UX, conversion), it’s hard to evaluate success."
+                    }
+                ]
+            },
         ],
 
         cta: {

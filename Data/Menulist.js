@@ -1,5 +1,6 @@
 import { blogs } from "@/Data/Blogs"
 import { authorityPages } from "./AuthorityPages"
+import { locationPages } from "./locationPages"
 
 export const menulist = {
     "list": ["home"],
@@ -17,6 +18,10 @@ export const menulist = {
         authorityPages.map(page => ({
             title: page.slug,
             link: `${page.slug}`
+        })),
+    locationBased:
+        locationPages.map(page => ({
+            title: page.title,
+            link: `shopify-developer-in/${page.slug}`
         }))
-
 }

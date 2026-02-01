@@ -36,6 +36,7 @@ const BlogRenderer = ({ data }) => {
                     <Section key={s.id || s.title} id={s.id} title={s.title}>
                         <Prose text={s.body} />
                         <CardGrid items={s.list} />
+                        <LinkPills items={s.cta} />
                     </Section>
                 ))}
 

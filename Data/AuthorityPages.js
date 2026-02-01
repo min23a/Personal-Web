@@ -257,6 +257,31 @@ export const authorityPages = [
                 body:
                     "If you want to validate my style before reaching out, the projects page contains real work examples and case-study style breakdowns.\n\nYou can also explore the supporting topic page below (freelance intent) to see how I approach Shopify work as an independent developer.",
             },
+            {
+                id: "what-to-send",
+                title: "What to send to get started",
+                body:
+                    "To get a quick estimate, send your store URL along with a brief description of what you want improved. If you have specific pages, examples, or screenshots, include those too.\n\nThe more context you provide, the faster I can propose a clear plan and estimate.",
+            },
+            {
+                id: "timeline",
+                title: "Typical timeline",
+                body:
+                    "Most Shopify development projects are delivered within 1-3 weeks, depending on scope. After the initial audit and plan, I provide a more precise timeline based on the work involved.",
+            },
+            {
+                id: "shopify-developer-in-different-locations",
+                title: "Shopify Developer in Different Locations",
+                body:
+                    "I also offer specialized Shopify development services tailored to specific regions. These location-based pages outline how I support stores in various countries with remote development, clear communication, and timezone-aligned workflows.",
+                cta: [
+                    { label: "USA", href: "/shopify-developer-in/usa" },
+                    { label: "Hungary", href: "/shopify-developer-in/hungary" },
+                    { label: "Germany", href: "/shopify-developer-in/germany" },
+                    { label: "UK", href: "/shopify-developer-in/uk" }
+
+                ]
+            }
         ],
 
         cta: {

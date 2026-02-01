@@ -12,6 +12,7 @@ const Footer = () => {
     const menu = menulist.list;
     const ext = menulist.external;
     const seo = menulist.authorityPage;
+    const location = menulist.locationBased.slice(1, 4);
     const link_cls = 'uppercase m-[10px] transition-[text-decoration] ease-in-out delay-[1.5s] hover:underline hover:underline-offset-4 ';
     return (
         <>
@@ -49,6 +50,17 @@ const Footer = () => {
                             {
                                 seo ?
                                     seo.map((x, index) => (
+                                        <Link key={index} href={`/${x.link}`} className={link_cls}>
+                                            {x.title}
+                                        </Link>
+                                    ))
+                                    : ""
+                            }
+                        </div>
+                        <div className='flex flex-col'>
+                            {
+                                location ?
+                                    location.map((x, index) => (
                                         <Link key={index} href={`/${x.link}`} className={link_cls}>
                                             {x.title}
                                         </Link>

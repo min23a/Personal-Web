@@ -106,7 +106,7 @@ export const FAQText = ({ enabled = true, title = "FAQ", items = [] }) => {
     );
 };
 
-export const ImageBlock = ({ src, alt = "", className = "" }) => {
+export const ImageBlock = ({ src, alt = "", className = "", priority }) => {
     if (!src) return null;
-    return <Image src={src} alt={alt} className={`mt-6 w-full ${className}`} />;
+    return <Image src={src} alt={alt} priority={priority} className={`mt-6 w-full ${className}`} />;
 };

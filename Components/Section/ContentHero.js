@@ -16,7 +16,7 @@ const ContentHero = ({ h1, img, imgAlt, intro, primaryCta, secondaryCta, meta })
             ) : null}
 
             <div className="mt-6">
-                <ImageBlock src={img} alt={imgAlt || "Hero Image"} className="w-full" />
+                <ImageBlock src={img} alt={imgAlt || "Hero Image"} className="w-full" priority={true} />
             </div>
 
             {intro ? <p className="text-lg leading-relaxed">{intro}</p> : null}

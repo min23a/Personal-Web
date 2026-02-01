@@ -100,6 +100,18 @@ export const blogs = [
                     }
                 ]
             },
+            {
+                id: "tag-filtering-blog",
+                title: "Related reading: Shopify Tag Filtering in Dawn Theme",
+                body:
+                    "Advanced filtering in Shopify’s Dawn theme requires custom logic… \nLearn how tag filtering works, common issues, and when custom code is needed to improve the experience.",
+                cta: [
+                    {
+                        label: "Read the article",
+                        href: "/blogs/shopify-tag-filtering-dawn-theme"
+                    }
+                ]
+            }
         ],
 
         cta: {
@@ -218,6 +230,18 @@ export const blogs = [
                 title: "Freelance developer vs agency",
                 body:
                     "Freelance Shopify developers are often a good fit for focused, execution-driven work. You communicate directly with the person building the solution, timelines are shorter, and overhead is lower.\n\nAgencies can be useful for large multi-disciplinary projects, but for theme customization, OS 2.0 sections, and performance work, a skilled freelancer often delivers faster and more cost-effective results."
+            },
+            {
+                id: "tag-filtering-blog",
+                title: "Related reading: Shopify Tag Filtering in Dawn Theme",
+                body:
+                    "Advanced filtering in Shopify’s Dawn theme requires custom logic… \nLearn how tag filtering works, common issues, and when custom code is needed to improve the experience.",
+                cta: [
+                    {
+                        label: "Read the article",
+                        href: "/blogs/shopify-tag-filtering-dawn-theme"
+                    }
+                ]
             }
         ],
 

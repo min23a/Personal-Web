@@ -65,7 +65,7 @@ export const LinkPills = ({ title, items = [], className = "" }) => {
     if (!items?.length) return null;
 
     return (
-        <section className={`mt-12 ${className}`}>
+        <section className={`mt-6 ${className}`}>
             {title ? <h2 className="text-2xl font-semibold">{title}</h2> : null}
             <div className="mt-4 flex flex-wrap gap-3">
                 {items.map((l) => (

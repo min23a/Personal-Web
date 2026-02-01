@@ -127,7 +127,7 @@ export const blogs = [
         slug: "how-to-hire-shopify-developer",
         type: "blog-article",
         seo: {
-            title: "How to Hire a Shopify Developer (Checklist + Common Mistakes)",
+            title: "How to Hire a Shopify Developer (Checklist, Cost & Red Flags)",
             description:
                 "A practical guide on how to hire a Shopify developer: what to look for, questions to ask, red flags to avoid, and how to choose the right fit for your store.",
             canonical: "https://abedin.online/how-to-hire-shopify-developer",

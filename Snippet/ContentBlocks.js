@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Accordion from "./Accordion";
+import Image from "next/image";
 
 /** Section container */
 export const Section = ({ title, children, id, className = "" }) => (
@@ -103,4 +104,9 @@ export const FAQText = ({ enabled = true, title = "FAQ", items = [] }) => {
             </div>
         </section>
     );
+};
+
+export const ImageBlock = ({ src, alt = "", className = "" }) => {
+    if (!src) return null;
+    return <Image src={src} alt={alt} className={`mt-6 w-full ${className}`} />;
 };

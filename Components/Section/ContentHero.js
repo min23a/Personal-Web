@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { ImageBlock } from "@/Snippet/ContentBlocks";
 
-const ContentHero = ({ h1, intro, primaryCta, secondaryCta, meta }) => {
+const ContentHero = ({ h1, img, imgAlt, intro, primaryCta, secondaryCta, meta }) => {
     return (
         <header className="space-y-4">
             {h1 ? <h1 className="text-4xl font-bold tracking-tight">{h1}</h1> : null}
@@ -13,6 +14,10 @@ const ContentHero = ({ h1, intro, primaryCta, secondaryCta, meta }) => {
                     {meta?.dateModified ? <span>Updated: {meta.dateModified}</span> : null}
                 </div>
             ) : null}
+
+            <div className="mt-6">
+                <ImageBlock src={img} alt={imgAlt || "Hero Image"} className="w-full" />
+            </div>
 
             {intro ? <p className="text-lg leading-relaxed">{intro}</p> : null}
 

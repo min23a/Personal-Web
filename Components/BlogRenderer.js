@@ -1,5 +1,5 @@
 import React from "react";
-import { CardGrid, CTABox, FAQText, LinkPills, Prose, Section } from "@/Snippet/ContentBlocks";
+import { CardGrid, CTABox, FAQText, ImageBlock, LinkPills, Prose, Section } from "@/Snippet/ContentBlocks";
 import ContentHero from "./Section/ContentHero";
 
 /**
@@ -22,6 +22,8 @@ const BlogRenderer = ({ data }) => {
             <ContentHero
                 h1={hero?.h1}
                 intro={hero?.intro}
+                img={hero?.img}
+                imgAlt={hero?.imgAlt}
                 primaryCta={hero?.primaryCta}
                 secondaryCta={hero?.secondaryCta}
                 meta={{
@@ -36,6 +38,7 @@ const BlogRenderer = ({ data }) => {
                     <Section key={s.id || s.title} id={s.id} title={s.title}>
                         <Prose text={s.body} />
                         <CardGrid items={s.list} />
+                        <ImageBlock src={s.img} alt={s.imgAlt} />
                         <LinkPills items={s.cta} />
                     </Section>
                 ))}

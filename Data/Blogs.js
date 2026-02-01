@@ -1,3 +1,5 @@
+import tag from "@/Images/blogImg/tagfilter.png"
+
 export const blogs = [
     {
         slug: "what-is-shopify-developer",
@@ -239,6 +241,113 @@ export const blogs = [
                 { label: "Freelance Shopify Developer", href: "/freelance-shopify-developer" },
                 { label: "Projects", href: "/projects" },
                 { label: "Contact", href: "/contact" }
+            ]
+        }
+    },
+    {
+        slug: "shopify-tag-filtering-dawn-theme",
+
+        seo: {
+            title: "Shopify Tag Filtering in Dawn Theme (How It Works & Common Issues)",
+            description:
+                "Learn how Shopify tag filtering works in the Dawn theme, common problems like AND logic and duplicate results, and when custom code is needed to fix filtering limitations.",
+            canonical: "https://abedin.online/shopify-tag-filtering-dawn-theme",
+            index: true,
+            follow: true,
+            datePublished: "2026-02-01",
+            dateModified: "2026-02-01",
+            readingTime: "6 min read"
+        },
+
+        hero: {
+            h1: "Shopify Tag Filtering in Dawn Theme (How It Works & Common Issues)",
+            intro:
+                "Shopify’s Dawn theme includes built-in filtering for collections, but many store owners and developers quickly run into limitations. Issues like strict AND logic, unexpected empty results, or poor filtering UX are common—especially for stores with complex product tagging.\n\nThis page explains how tag filtering works in the Dawn theme, why common problems occur, and when a custom solution is the right approach.",
+            img: tag,
+            imgAlt: "Shopify Tag Filtering",
+
+        },
+
+        sections: [
+            {
+                id: "what-is-tag-filtering",
+                title: "What Shopify tag filtering is",
+                body:
+                    "Shopify tag filtering allows products within a collection to be filtered based on product tags. Tags are simple text labels assigned to products, often used for attributes like size, color, material, or use case.\n\nIn Shopify, tag filtering works by appending tag-based parameters to collection URLs. While this system is lightweight and fast, it was originally designed for simple use cases—not complex multi-attribute filtering.\n\n Exaple url:\n\n /collections/shop-cases?filter.p.tag=l_11&filter.v.price.gte=&filter.v.price.lte=&sort_by=manual",
+            },
+
+            {
+                id: "dawn-default-behavior",
+                title: "How the Dawn theme handles filters by default",
+                body:
+                    "The Dawn theme uses Shopify’s native filtering system, powered by Online Store 2.0 facets. These filters are rendered using Liquid and updated via AJAX when users interact with them.\n\nBy default, Dawn applies filters using an AND logic. This means when multiple tags are selected, Shopify returns only products that contain all selected tags. For small catalogs this may work, but for many real-world stores it quickly becomes restrictive.",
+            },
+
+            {
+                id: "common-problems",
+                title: "Common problems with Shopify tag filtering",
+                list: [
+                    {
+                        title: "Strict AND logic",
+                        desc:
+                            "Selecting multiple tags often returns zero results because products rarely share every selected tag. Store owners expect OR behavior, but Shopify does not support this natively."
+                    },
+                    {
+                        title: "Duplicate or confusing results",
+                        desc:
+                            "When developers attempt workarounds, products can appear multiple times or filter counts become inaccurate."
+                    },
+                    {
+                        title: "Poor UX for complex catalogs",
+                        desc:
+                            "Tag-based filters do not scale well for stores with many attributes, leading to cluttered filter panels and confusing customer journeys."
+                    },
+                    {
+                        title: "Limited customization",
+                        desc:
+                            "Out-of-the-box Dawn filters offer limited control over grouping, labeling, and logical relationships between tags."
+                    }
+                ]
+            },
+
+            {
+                id: "solution-approach",
+                title: "Practical solution approach (conceptual)",
+                body:
+                    "Solving filtering limitations usually starts with understanding the desired user behavior. In many cases, customers expect OR logic within a filter group (for example, multiple sizes) and AND logic between groups (size + color).\n\nA common approach is to fetch results for individual tags separately and merge them on the front end. This allows more flexible logic while still using Shopify’s collection endpoints and maintaining fast performance.\n\nThe key is to keep the solution app-free, predictable, and aligned with Dawn’s section-based rendering—so it remains upgrade-safe."
+            },
+
+            {
+                id: "when-custom-code-needed",
+                title: "When custom code is needed",
+                body:
+                    "If your store relies heavily on filtering for navigation or conversion, custom code becomes necessary. This is especially true when default Dawn behavior blocks product discovery or creates empty states.\n\nA Shopify developer can implement custom filtering logic using Liquid, JavaScript, and AJAX—without replacing the theme or introducing heavy third-party apps. The result is a faster, clearer filtering experience that matches how customers actually browse products."
+            },
+
+            {
+                id: "next-steps",
+                title: "Related resources & next steps",
+                body:
+                    "If you’re dealing with advanced filtering requirements, it’s often a sign that your store has outgrown default theme behavior.\n\nIf your store needs advanced filtering logic beyond default Shopify behavior, a Shopify developer can implement a clean, upgrade-safe solution tailored to your catalog structure.",
+                links: [
+                    {
+                        label: "Shopify Developer",
+                        href: "/shopify-developer"
+                    },
+                    {
+                        label: "Hire Shopify Developer",
+                        href: "/hire-shopify-developer"
+                    }
+                ]
+            }
+        ],
+
+        internalLinks: {
+            title: "Explore related topics",
+            items: [
+                { label: "Shopify Developer", href: "/shopify-developer" },
+                { label: "Projects", href: "/projects" },
+                { label: "Hire Shopify Developer", href: "/hire-shopify-developer" }
             ]
         }
     }

@@ -21,8 +21,6 @@ export function buildBlogSchema(blog) {
         blog?.img ||
         null;
 
-    console.log(imageUrl)
-
     // ImageObject (only if valid URL)
     const imageObject = imageUrl
         ? {

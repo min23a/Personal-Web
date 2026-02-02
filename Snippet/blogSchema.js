@@ -14,6 +14,25 @@ export function buildBlogSchema(blog) {
 
     const url = `${BASE}/${blog.slug}`;
 
+    // Prefer explicit SEO image, then hero image, then generic image.
+    const imageUrl =
+        blog?.seo?.img ||
+        blog?.hero?.img ||
+        blog?.img ||
+        null;
+
+    console.log(imageUrl)
+
+    // ImageObject (only if valid URL)
+    const imageObject = imageUrl
+        ? {
+            "@type": "ImageObject",
+            "@id": `${url}#primaryimage`,
+            url: absolutize(imageUrl),
+            contentUrl: absolutize(imageUrl),
+        }
+        : undefined;
+
     const schemas = [];
 
     /* ----------------------------------------
@@ -71,6 +90,16 @@ export function buildBlogSchema(blog) {
         inLanguage: "en",
     });
 
+    /* ---------------------------
+   * ImageObject (referenced by WebPage + Article)
+   * ------------------------- */
+    if (imageObject) {
+        schemas.push({
+            "@context": "https://schema.org",
+            ...imageObject,
+        });
+    }
+
     /* ----------------------------------------
      * FAQPage (ONLY if FAQ is enabled & visible)
      * -------------------------------------- */
@@ -98,4 +127,22 @@ export function buildBlogSchema(blog) {
  * -------------------------------------- */
 function cleanUndefined(obj) {
     return JSON.parse(JSON.stringify(obj));
+}
+
+
+/**
+ * If you ever pass a relative URL like "/og/blog.jpg",
+ * this ensures it becomes absolute for schema.
+ */
+function absolutize(input) {
+    if (!input) return undefined;
+
+    // Next.js imported image object: { src, width, height, ... }
+    const src = typeof input === "string" ? input : input?.src;
+
+    if (!src || typeof src !== "string") return undefined;
+
+    if (src.startsWith("http://") || src.startsWith("https://")) return src;
+    if (src.startsWith("/")) return `${BASE}${src}`;
+    return `${BASE}/${src}`;
 }

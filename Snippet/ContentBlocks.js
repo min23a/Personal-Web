@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Accordion from "./Accordion";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 /** Section container */
 export const Section = ({ title, children, id, className = "" }) => (
@@ -31,6 +33,7 @@ export const CardGrid = ({ items = [], className = "" }) => {
                 <div key={x.title} className="rounded-2xl border p-5">
                     <h3 className="font-semibold">{x.title}</h3>
                     {x.desc ? <p className="mt-2 leading-relaxed">{x.desc}</p> : null}
+                    {x.href ? <Link className="text-sm mt-3 hover:underline" href={x.href}>Read More <FontAwesomeIcon className='ml-3' icon={faArrowRight} /></Link> : null}
                 </div>
             ))}
         </div>

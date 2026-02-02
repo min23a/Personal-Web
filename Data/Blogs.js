@@ -1,5 +1,5 @@
 import tag from "@/Images/blogImg/tagfilter.png"
-import { list } from "postcss";
+import opt from "@/Images/blogImg/optimization.png"
 
 export const blogs = [
     {
@@ -401,7 +401,9 @@ export const blogs = [
             intro:
                 "Improving your Shopify store's performance is crucial for enhancing user experience, boosting SEO rankings, and increasing conversion rates. In this article, we'll explore practical tips and strategies for optimizing your Shopify store's speed and Core Web Vitals. From image optimization to code minification, these tips will help you create a faster, more efficient online shopping experience for your customers. \n\nWhether you're a store owner or a developer, implementing these performance optimization techniques can lead to significant improvements in your store's overall performance. Let's dive into the key strategies you can use to enhance your Shopify store's speed and Core Web Vitals.",
             primaryCta: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
-            secondaryCta: { label: "View Projects", href: "/projects" }
+            secondaryCta: { label: "View Projects", href: "/projects" },
+            img: opt,
+            imgAlt: "Shopify Performance Optimization"
         },
 
         sections: [

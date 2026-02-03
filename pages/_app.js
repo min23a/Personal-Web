@@ -1,9 +1,7 @@
 import '@/styles/globals.css'
-
 import { useEffect } from "react";
 import { initScrollAnimate, destroyScrollAnimate } from "@/services/scroll-animate"
 import { GoogleAnalytics } from "@next/third-parties/google"
-
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -27,10 +25,12 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
+  const id = process.env.NEXT_PUBLIC_GID
+
   return <>
     <Component {...pageProps} />
     <Analytics />
     <SpeedInsights />
-    <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS} />
+    <GoogleAnalytics gaId={id} />
   </>
 }

@@ -28,7 +28,7 @@ export default function CookieConsent() {
                     }}
                     className="rounded-full border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white transition"
                 >
-                    Accept analytics
+                    Accept
                 </button>
 
                 <button

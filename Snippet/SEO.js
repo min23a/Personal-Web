@@ -17,7 +17,7 @@ const SEO = ({ path = "", data }) => {
             <link rel="canonical" href={`https://abedin.online/${path}`} />
             <Analytics />
             <SpeedInsights />
-            <GoogleAnalytics gaId={process.env.GOOGLEANALYTICS} />
+            <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS} />
         </Head>
     )
 }

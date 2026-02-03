@@ -31,6 +31,6 @@ export default function App({ Component, pageProps }) {
     <Component {...pageProps} />
     <Analytics />
     <SpeedInsights />
-    <GoogleAnalytics gaId={id} />
+    <GoogleAnalytics gaId="G-SBNQH3829E" />
   </>
 }

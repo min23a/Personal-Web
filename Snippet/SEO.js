@@ -1,6 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head'
 import React from 'react'
 
@@ -17,7 +16,6 @@ const SEO = ({ path = "", data }) => {
             <link rel="canonical" href={`https://abedin.online/${path}`} />
             <Analytics />
             <SpeedInsights />
-            <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS} />
         </Head>
     )
 }

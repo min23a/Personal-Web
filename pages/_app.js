@@ -1,11 +1,11 @@
 import '@/styles/globals.css'
 import { useEffect } from "react";
 import { initScrollAnimate, destroyScrollAnimate } from "@/services/scroll-animate"
-import { GoogleAnalytics } from "@next/third-parties/google"
-
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { Analytics } from '@vercel/analytics/react'
+import Ganalytics from '@/Snippet/Ganalytics';
+import CookieConsent from '@/Components/CookieConsent';
 
 
 export default function App({ Component, pageProps }) {
@@ -25,12 +25,11 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  const id = process.env.NEXT_PUBLIC_GID
-
   return <>
     <Component {...pageProps} />
+    <CookieConsent />
     <Analytics />
     <SpeedInsights />
-    <GoogleAnalytics gaId="G-SBNQH3829E" />
+    <Ganalytics />
   </>
 }

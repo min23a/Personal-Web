@@ -42,15 +42,40 @@ export const menu = {
         },
     ],
 
-
-    authorityPage:
-        authorityPages.map(page => ({
-            title: page.slug,
-            link: `${page.slug}`
-        })),
-    locationBased:
-        locationPages.map(page => ({
-            title: page.title,
-            link: `shopify-developer-in/${page.slug}`
-        }))
+    footer: [
+        {
+            main: [
+                {
+                    title: 'Home',
+                    link: "/"
+                },
+                {
+                    title: 'about',
+                    link: "about"
+                },
+                {
+                    title: 'contact',
+                    link: "contact"
+                },
+                {
+                    title: 'privacy & policy',
+                    link: 'privacy-policy'
+                }
+            ]
+        },
+        {
+            authorityPage:
+                authorityPages.map(page => ({
+                    title: page.slug,
+                    link: `${page.slug}`
+                }))
+        },
+        {
+            locationBased:
+                locationPages.map(page => ({
+                    title: page.title,
+                    link: `shopify-developer-in/${page.slug}`
+                }))
+        }
+    ]
 }

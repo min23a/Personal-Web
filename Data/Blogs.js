@@ -1,6 +1,8 @@
 import tag from "@/Images/blogImg/tagfilter.png"
 import opt from "@/Images/blogImg/optimization.png"
 import agnt from "@/Images/blogImg/Agentic.png"
+import localseo from "@/Images/blogImg/localseo.webp"
+import strai from "@/Images/blogImg/strai.webp"
 
 export const blogs = [
     {
@@ -136,6 +138,232 @@ export const blogs = [
                 { label: "Shopify Performance Optimization Tips", href: "/shopify-performance-optimization-tips" },
                 { label: "Shopify Tag Filtering in Dawn Theme", href: "/shopify-tag-filtering-dawn-theme" },
                 { label: "Projects", href: "/projects" }
+            ]
+        }
+    },
+    {
+        slug: "is-your-shopify-store-ready-for-ai-agents",
+        type: "blog-article",
+
+        seo: {
+            title:
+                "Is Your Shopify Store Ready for AI Agents? A Practical Readiness Guide",
+            description:
+                "Learn how to assess whether your Shopify store is ready for AI agents, agentic commerce, and automated shopping workflows. Covers data structure, APIs, performance, and theme architecture.",
+            canonical: "https://abedin.online/is-your-shopify-store-ready-for-ai-agents",
+            tags: [
+                "AI Agents Shopify",
+                "Agentic Commerce",
+                "Shopify AI Readiness",
+                "Future of Ecommerce",
+                "Shopify Store Architecture",
+                "AI Commerce Preparation"
+            ],
+            datePublished: "2026-02-06",
+            dateModified: "2026-02-06",
+            readingTime: "9 min read"
+        },
+
+        hero: {
+            h1: "Is Your Shopify Store Ready for AI Agents?",
+            intro:
+                "As AI systems evolve from assistants into autonomous agents, the way e-commerce stores are accessed and evaluated is beginning to change. Instead of only serving human shoppers, online stores may increasingly be queried by AI agents acting on behalf of users.\n\nThis article explores what it means for a Shopify store to be \"AI-ready,\" what technical foundations matter most, and how merchants and developers can prepare without overengineering.",
+            primaryCta: {
+                label: "Read about Agentic Commerce Protocol",
+                href: "/blogs/agentic-commerce-protocol-shopify"
+            },
+            secondaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
+            img: strai,
+            imgAlt: "Is Your Shopify Store Ready for AI Agents?"
+        },
+
+        sections: [
+            {
+                id: "what-ai-agents-are",
+                title: "What AI agents mean for online stores",
+                body:
+                    "AI agents are systems capable of understanding intent, evaluating options, and executing tasks autonomously. In commerce, this could mean searching products, comparing prices, checking availability, and completing purchases without direct human interaction.\n\nUnlike traditional automation, AI agents are goal-driven. They don’t simply follow a script—they reason across constraints such as budget, delivery speed, sustainability, or brand preferences."
+            },
+
+            {
+                id: "why-shopify-stores-are-affected",
+                title: "Why Shopify stores are directly affected",
+                body:
+                    "Shopify already exposes much of its commerce logic through APIs, structured product data, and predictable checkout flows. This makes Shopify stores technically accessible to agent-driven systems.\n\nHowever, accessibility alone is not enough. Stores with inconsistent data, heavy front-end logic, or fragile theme customization may be harder for agents to interpret reliably."
+            },
+
+            {
+                id: "data-structure",
+                title: "Structured product data becomes critical",
+                body:
+                    "AI agents depend on structured, machine-readable information. This includes clear product titles, consistent attributes, predictable variant logic, and meaningful metadata.\n\nStores that rely heavily on visual cues or unstructured descriptions may perform well for humans but poorly for automated decision systems. Clean data modeling is one of the most important readiness factors."
+            },
+
+            {
+                id: "performance-and-predictability",
+                title: "Performance and predictability over visual tricks",
+                body:
+                    "Agent-driven systems value speed, consistency, and reliability. Heavy JavaScript execution, unpredictable rendering, or slow API responses can reduce an agent’s ability to interact with a store effectively.\n\nFrom a practical standpoint, this aligns closely with Core Web Vitals and performance best practices already recommended for human UX."
+            },
+
+            {
+                id: "theme-architecture",
+                title: "Theme architecture matters more than ever",
+                body:
+                    "Upgrade-safe, modular theme architecture helps ensure predictable behavior across updates. Clean Liquid structure, reusable sections, and minimal side effects make storefront behavior easier to reason about—both for humans and machines.\n\nStores built with app-heavy or tightly coupled custom code may face more friction adapting to new interfaces."
+            },
+
+            {
+                id: "practical-preparation",
+                title: "How to prepare without overengineering",
+                body:
+                    "Preparing for AI agents does not require speculative rewrites. Instead, focus on fundamentals:\n\n• clean data structure\n• performance-friendly themes\n• predictable filtering and navigation\n• minimal unnecessary client-side logic\n\nThese improvements benefit current customers while future-proofing the store."
+            }
+        ],
+
+        cta: {
+            title: "Preparing your Shopify store for what’s next",
+            desc:
+                "Agent-driven commerce is still emerging, but strong fundamentals make adaptation easier. Clean theme architecture and performance-focused development remain the safest investments.",
+            button: {
+                label: "Hire Shopify Developer",
+                href: "/hire-shopify-developer"
+            }
+        },
+
+        faq: {
+            enabled: false,
+            title: "",
+            items: []
+        },
+
+        internalLinks: {
+            title: "Related reading",
+            items: [
+                { label: "Agentic Commerce Protocol Explained", href: "/blogs/agentic-commerce-protocol-shopify" },
+                { label: "Shopify Performance Optimization Tips", href: "/shopify-performance-optimization-tips" },
+                { label: "Shopify Tag Filtering in Dawn Theme", href: "/shopify-tag-filtering-dawn-theme" },
+                { label: "Projects", href: "/projects" }
+            ]
+        }
+    },
+    {
+        slug: "local-seo-in-the-age-of-ai-and-rseo",
+        type: "blog-article",
+
+        seo: {
+            title:
+                "Local SEO in the Age of AI: From Traditional SEO to Relevant Search Optimization (RSEO)",
+            description:
+                "A deep look at how local SEO is evolving with AI-driven search. Learn how businesses should adapt from traditional Google SEO to Relevant Search Optimization (RSEO).",
+            canonical: "https://abedin.online/local-seo-in-the-age-of-ai-and-rseo",
+            tags: [
+                "Local SEO",
+                "Relevant Search Optimization",
+                "RSEO",
+                "AI Search",
+                "Google My Business Optimization",
+                "Local Business SEO Strategy"
+            ],
+            datePublished: "2026-02-06",
+            dateModified: "2026-02-06",
+            readingTime: "8 min read"
+        },
+
+        hero: {
+            h1: "Local SEO in the Age of AI and Relevant Search Optimization",
+            intro:
+                "Local SEO has traditionally focused on ranking in Google’s local search results. However, as AI-driven discovery expands across platforms, local visibility is no longer limited to Google alone.\n\nThis article explores how local SEO is evolving, why \"Relevant Search Optimization\" (RSEO) is becoming important, and how businesses should adapt their strategy in an AI-driven search landscape.",
+            primaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
+            secondaryCta: { label: "Contact", href: "/contact" },
+            img: localseo,
+            imgAlt: "Local SEO in the Age of AI Illustration"
+        },
+
+        sections: [
+            {
+                id: "what-local-seo-is",
+                title: "What local SEO is and why it matters",
+                body:
+                    "Local SEO helps businesses with physical locations or geographic targeting appear in nearby search results when potential customers search for relevant products or services.\n\nThis includes visibility in Google Maps, local search packs, and region-specific organic results."
+            },
+
+            {
+                id: "traditional-tactics",
+                title: "Core local SEO tactics that still matter",
+                list: [
+                    {
+                        title: "Google Business Profile optimization",
+                        desc:
+                            "Accurate business details, categories, images, and consistent updates help improve local visibility."
+                    },
+                    {
+                        title: "Location-specific keywords",
+                        desc:
+                            "Including geographic modifiers in content and metadata helps match local search intent."
+                    },
+                    {
+                        title: "Customer reviews",
+                        desc:
+                            "Reviews influence trust, click-through rates, and local ranking signals."
+                    },
+                    {
+                        title: "Local citations",
+                        desc:
+                            "Consistent mentions across directories reinforce legitimacy and location relevance."
+                    }
+                ]
+            },
+
+            {
+                id: "shift-to-rseo",
+                title: "The shift from traditional SEO to RSEO",
+                body:
+                    "As AI-driven discovery grows, search is no longer confined to Google. Users increasingly discover businesses through platforms like Instagram, TikTok, YouTube, and AI assistants.\n\nRelevant Search Optimization (RSEO) focuses on being discoverable where your audience actually searches—not just where Google rankings traditionally mattered."
+            },
+
+            {
+                id: "audit-first-approach",
+                title: "Why an SEO audit should come before strategy",
+                body:
+                    "One key insight from recent discussions is the importance of diagnosis before action. Performing an SEO audit is like diagnosing a condition before prescribing treatment.\n\nWithout understanding technical health, content gaps, and platform performance, optimization efforts often become trial and error."
+            },
+
+            {
+                id: "platform-alignment",
+                title: "Choosing platforms based on audience behavior",
+                body:
+                    "Instead of optimizing everywhere, businesses should identify which platforms their target customers actually use. A local restaurant may benefit more from Google Maps and Instagram, while a niche retailer might gain more traction on TikTok or Pinterest.\n\nEffective local SEO today is about alignment, not blanket coverage."
+            },
+
+            {
+                id: "future-local-search",
+                title: "How AI will shape local discovery",
+                body:
+                    "AI-driven search systems increasingly summarize, recommend, and contextualize local businesses. This means consistency, clarity, and reputation matter more than isolated ranking tricks.\n\nLocal SEO is becoming less about gaming algorithms and more about being genuinely relevant across platforms."
+            }
+        ],
+
+        cta: {
+            title: "Building future-proof visibility",
+            desc:
+                "Whether for local SEO or e-commerce, strong technical foundations and clear content structure make adaptation easier as search continues to evolve.",
+            button: { label: "View Projects", href: "/projects" }
+        },
+
+        faq: {
+            enabled: false,
+            title: "",
+            items: []
+        },
+
+        internalLinks: {
+            title: "Related resources",
+            items: [
+                { label: "Shopify Performance Optimization Tips", href: "/shopify-performance-optimization-tips" },
+                { label: "Agentic Commerce Protocol Explained", href: "/blogs/agentic-commerce-protocol-shopify" },
+                { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
+                { label: "Contact", href: "/contact" }
             ]
         }
     },
@@ -408,7 +636,7 @@ export const blogs = [
     },
     {
         slug: "shopify-tag-filtering-dawn-theme",
-
+        type: "blog-aryicle",
         seo: {
             title: "Shopify Tag Filtering in Dawn Theme (How It Works & Common Issues)",
             description:

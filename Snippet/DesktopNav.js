@@ -3,9 +3,10 @@ import { menulist } from '@/Data/Menulist'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faChevronDown, faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faChevronDown, faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { personalData } from '@/Data/PersonalData'
 import Dropdown from './Dropdown'
+import FlexWarp from './FlexWarp'
 
 const DesktopNav = () => {
     const menu = menulist.list;
@@ -37,6 +38,33 @@ const DesktopNav = () => {
                                 {x}
                             </Link>
                         )) : ""
+                    }
+                    {
+                        menulist.projects ?
+                            menulist.projects.subMenu ?
+                                <div className='group dropdown p-3'>
+
+                                    <Link href={`/${menulist.projects.link}`} className={link_cls + ' cursor-pointer'}>
+                                        {menulist.projects.title}
+                                        <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm group-hover:rotate-180 transition-all' />
+                                    </Link>
+                                    <div className='absolute top-[40px] left-[0px] w-full hidden group-hover:block bg-gradient-to-t from-black to-gray-800 shadow-lg rounded-md z-10'>
+                                        <FlexWarp className="mx-auto">
+                                            <Dropdown menu={menulist.projects.subMenu} parent={menulist.projects.link} />
+                                            {menulist.projects.additional ?
+                                                <Link href={`/${menulist.projects.additional.link}`} className={link_cls + " py-2 sm:p-4 flex-1"}>
+                                                    {menulist.projects.additional.title}
+                                                    <FontAwesomeIcon icon={faArrowRight} className='ml-3' />
+                                                </Link>
+                                                : ""
+                                            }
+                                        </FlexWarp>
+                                    </div>
+                                </div>
+                                : <Link href={`/${menulist.projects.link}`} className={link_cls}>
+                                    {menulist.projects.title}
+                                </Link>
+                            : ""
                     }
                     {
                         menulist.blog ?

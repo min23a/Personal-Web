@@ -9,7 +9,6 @@ export default function CookieConsent() {
         if (!consent) setVisible(true);
     }, []);
 
-    console.log(visible)
     if (!visible) return null;
 
     return (

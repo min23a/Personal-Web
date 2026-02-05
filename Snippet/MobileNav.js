@@ -2,7 +2,7 @@ import { menulist } from '@/Data/Menulist';
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faChevronDown, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faBars, faChevronDown, faFileDownload, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { handleDisplay } from './Show';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { personalData } from '@/Data/PersonalData';
@@ -15,9 +15,9 @@ const MobileNav = () => {
     const ext = menulist.external;
     const link_cls = 'uppercase m-[10px] w-full transition ease-in-out delay-[1.5s] hover:font-bold';
 
-    const handleclick = () => {
-        const dropdown = document.querySelector('.dropdown');
-        const arrow = document.querySelector('.dropdown-arrow');
+    const handleclick = (id) => {
+        const dropdown = document.getElementById(id)
+        const arrow = dropdown.querySelector('.dropdown-arrow');
         const menu = dropdown.querySelector('div');
         if (menu.classList.contains('hidden')) {
             menu.classList.remove('hidden');
@@ -77,14 +77,38 @@ const MobileNav = () => {
                     )) : ""
                 }
                 {
+                    menulist.projects ?
+                        menulist.projects.subMenu ?
+                            <div id={menulist.projects.title} onClick={() => handleclick(menulist.projects.title)} className={link_cls + ' cursor-pointer dropdown relative'}>
+                                <Link href={`/${menulist.projects.link}`} >
+                                    {menulist.projects.title}
+                                    <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
+                                </Link>
+                                <div className="max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[10px] w-full hidden">
+                                    <Dropdown menu={menulist.projects.subMenu} parent={menulist.projects.link} />
+                                    {menulist.projects.additional ?
+                                        <Link href={`/${menulist.projects.additional.link}`} className={link_cls + " py-2 sm:p-4 flex-1"}>
+                                            {menulist.projects.additional.title}
+                                            <FontAwesomeIcon icon={faArrowRight} className='ml-3' />
+                                        </Link>
+                                        : ""
+                                    }
+                                </div>
+                            </div>
+                            : <Link href={`/${menulist.projects.link}`} className={link_cls}>
+                                {menulist.projects.title}
+                            </Link>
+                        : ""
+                }
+                {
                     menulist.blog ?
                         menulist.blog.subMenu ?
-                            <div onClick={handleclick} className={link_cls + ' cursor-pointer dropdown relative'}>
+                            <div id={menulist.blog.title} onClick={() => handleclick(menulist.blog.title)} className={link_cls + ' cursor-pointer dropdown relative'}>
                                 <Link href={`/${menulist.blog.link}`} >
                                     {menulist.blog.title}
                                     <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
                                 </Link>
-                                <div className='max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[0px] w-full hidden'>
+                                <div className='max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[10px] w-full hidden'>
                                     <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
                                 </div>
                             </div>

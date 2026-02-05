@@ -1,7 +1,144 @@
 import tag from "@/Images/blogImg/tagfilter.png"
 import opt from "@/Images/blogImg/optimization.png"
+import agnt from "@/Images/blogImg/Agentic.png"
 
 export const blogs = [
+    {
+        slug: "agentic-commerce-protocol-shopify",
+        type: "blog-article",
+
+        seo: {
+            title:
+                "Agentic Commerce Protocol (ACP) Explained: What It Means for Shopify & E-commerce",
+            description:
+                "A deep dive into Agentic Commerce Protocol (ACP), how agent-driven commerce works, what it means for Shopify merchants, and how AI agents may change online shopping workflows.",
+            canonical: "https://abedin.online/agentic-commerce-protocol-shopify",
+            tags: [
+                "Agentic Commerce Protocol",
+                "ACP Shopify",
+                "AI Agents in E-commerce",
+                "Autonomous Commerce",
+                "AI Shopping Agents",
+                "Future of Shopify",
+                "E-commerce Automation",
+                "AI Driven Commerce"
+            ],
+            datePublished: "2026-02-04",
+            dateModified: "2026-02-04",
+            readingTime: "10 min read"
+        },
+
+        hero: {
+            h1: "Agentic Commerce Protocol (ACP): What It Means for Shopify & E-commerce",
+            intro:
+                "Agentic Commerce Protocol (ACP) is an emerging concept that explores how autonomous AI agents can participate directly in online commerce—searching, comparing, negotiating, and completing transactions on behalf of users.\n\nThis article breaks down what ACP is, why it matters, how it may affect Shopify and e-commerce workflows, and what developers and merchants should understand as agent-driven commerce begins to take shape.",
+            primaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
+            secondaryCta: { label: "View Projects", href: "/projects" },
+            img: agnt,
+            imgAlt: "Agentic Commerce Protocol (ACP):"
+        },
+
+        sections: [
+            {
+                id: "what-is-acp",
+                title: "What is the Agentic Commerce Protocol (ACP)?",
+                body:
+                    "Agentic Commerce Protocol (ACP) refers to a proposed framework where AI agents act as independent participants in commerce. Instead of humans manually browsing stores, AI agents can search products, evaluate options, interact with APIs, and execute transactions based on user-defined goals.\n\nIn simple terms, ACP is about enabling software agents to become shoppers. These agents can make decisions, follow rules, and complete tasks without constant human input."
+            },
+
+            {
+                id: "why-it-exists",
+                title: "Why Agentic Commerce is emerging now",
+                body:
+                    "Agentic commerce is emerging because of rapid advances in large language models, reasoning systems, and automation tooling. AI agents are now capable of understanding intent, navigating structured data, and interacting with APIs reliably.\n\nAt the same time, e-commerce platforms are increasingly API-driven. This creates the conditions for agents to interact with stores programmatically—checking availability, comparing pricing, and completing purchases."
+            },
+
+            {
+                id: "how-it-differs",
+                title: "How agentic commerce differs from traditional automation",
+                body:
+                    "Traditional automation relies on fixed rules and predefined flows. Agentic systems are goal-oriented. Instead of following a single script, an agent evaluates multiple options and adapts its behavior.\n\nFor example, instead of a user filtering products manually, an AI agent could be instructed to find the best product under specific constraints such as budget, delivery speed, sustainability, or compatibility."
+            },
+
+            {
+                id: "shopify-context",
+                title: "What ACP could mean for Shopify stores",
+                body:
+                    "For Shopify merchants, agentic commerce introduces a new type of customer: AI agents acting on behalf of humans.\n\nThis could change how stores expose data, structure product information, and design checkout flows. Stores that provide clean, well-structured data and predictable APIs may become more compatible with agent-driven shopping systems.\n\nRather than replacing storefronts, ACP may sit alongside traditional browsing—serving users who prefer delegation over manual decision-making."
+            },
+
+            {
+                id: "technical-components",
+                title: "Key technical components behind agentic commerce",
+                list: [
+                    {
+                        title: "Structured product data",
+                        desc:
+                            "Agents rely on consistent, machine-readable product attributes such as pricing, availability, variants, and metadata."
+                    },
+                    {
+                        title: "APIs and interoperability",
+                        desc:
+                            "Agentic commerce depends on stable APIs that allow querying catalogs, validating carts, and completing transactions."
+                    },
+                    {
+                        title: "Decision logic and constraints",
+                        desc:
+                            "Agents evaluate trade-offs such as cost, delivery time, brand preference, and sustainability rules."
+                    },
+                    {
+                        title: "Security and authorization",
+                        desc:
+                            "Clear permission boundaries are required so agents act only within user-approved limits."
+                    }
+                ]
+            },
+
+            {
+                id: "challenges",
+                title: "Challenges and open questions",
+                body:
+                    "Despite its potential, agentic commerce raises important challenges. Trust, transparency, and accountability remain open questions.\n\nMerchants may need new ways to verify agent behavior, prevent abuse, and ensure fair competition. From a development perspective, compatibility standards are still evolving, and no single protocol has been universally adopted."
+            },
+
+            {
+                id: "future-impact",
+                title: "Long-term impact on e-commerce workflows",
+                body:
+                    "If agentic commerce matures, e-commerce workflows may shift from interface-driven to intent-driven. Instead of designing purely for human interaction, developers may need to consider how systems behave when queried by intelligent agents.\n\nThis does not eliminate the need for storefront UX—but it adds a parallel layer where structured data, performance, and clarity become even more critical."
+            },
+
+            {
+                id: "who-should-care",
+                title: "Who should pay attention to ACP today",
+                body:
+                    "Shopify developers, platform architects, and technically minded merchants should monitor agentic commerce trends closely. While ACP is still emerging, early understanding helps future-proof storefront architecture and data modeling.\n\nStores that prioritize clean structure, performance, and upgrade-safe customization are likely to adapt more easily as new commerce interfaces appear."
+            }
+        ],
+
+        cta: {
+            title: "Preparing your Shopify store for the future",
+            desc:
+                "As commerce becomes more automated and data-driven, having a clean, performant, and well-structured Shopify theme becomes increasingly important.",
+            button: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" }
+        },
+
+        faq: {
+            enabled: false,
+            title: "",
+            items: []
+        },
+
+        internalLinks: {
+            title: "Related resources",
+            items: [
+                { label: "Shopify Developer", href: "/shopify-developer" },
+                { label: "Shopify Performance Optimization Tips", href: "/shopify-performance-optimization-tips" },
+                { label: "Shopify Tag Filtering in Dawn Theme", href: "/shopify-tag-filtering-dawn-theme" },
+                { label: "Projects", href: "/projects" }
+            ]
+        }
+    },
     {
         slug: "what-is-shopify-developer",
         type: "blog-article",
@@ -501,5 +638,6 @@ export const blogs = [
             ]
         }
 
-    }
+    },
+
 ];

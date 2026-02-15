@@ -1,12 +1,3 @@
-import cro from '../Images/CRO.png'
-import casep from '../Images/Case.png'
-import full from '../Images/Full.png'
-import nex from '../Images/nex.png'
-import sec from '../Images/sections.png'
-import starter from '../Images/starter.png'
-import web from '../Images/web.png'
-import ai from '../Images/ai.png'
-
 export const projects = [
     {
         title: "GreatNess",
@@ -60,7 +51,7 @@ export const projects = [
             cro: "Improved product page clarity and layout consistency",
             business: "Reduced reliance on third-party apps",
         },
-        photo: { src: cro, alt: "CRO Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386758/CRO_r9c9h9.png", alt: "CRO Project Image", priority: false },
         tools: [
             "Shopify",
             "Dawn / Online Store 2.0",
@@ -119,7 +110,7 @@ export const projects = [
             ux: "Clearer visual hierarchy and improved product presentation",
             cro: "More intuitive navigation and category structure",
         },
-        photo: { src: casep, alt: "The Case Place Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386758/Case_cos9io.png", alt: "The Case Place Project Image", priority: false },
         tools: ["Shopify", "Online Store 2.0", "Liquid", "JavaScript", "HTML", "CSS"],
         link: "https://thecaseplace.com/",
         stars: 5
@@ -169,7 +160,7 @@ export const projects = [
             ux: "Improved product understanding via interactive 3D media",
             engagement: "Longer product page interaction time",
         },
-        photo: { src: full, alt: "Full Battery Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386759/Full_uawhvj.png", alt: "Full Battery Project Image", priority: false },
         tools: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS", "Shopify 3D Product Media"],
         link: "https://fullbattery.com/",
         stars: 5
@@ -220,7 +211,7 @@ export const projects = [
             performance: "Cleaner front-end structure and reduced layout overhead",
             maintainability: "Simplified theme components for future updates",
         },
-        photo: { src: nex, alt: "Nexmetal Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386764/nex_oialyt.png", alt: "Nexmetal Project Image", priority: false },
         tools: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"],
         link: "https://nexmetal.com/",
         stars: 5
@@ -272,7 +263,7 @@ export const projects = [
             cro: "Higher relevance in filtered results",
             technical: "App-free solution with native AJAX rendering",
         },
-        photo: { src: full, alt: "Full Battery Collection Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386814/tagfilter_s96xqs.png", alt: "Full Battery Collection Project Image", priority: false },
         tools: ["Shopify", "Dawn Theme", "Liquid", "JavaScript (AJAX)", "HTML", "CSS"],
         link: "https://fullbattery.com/",
         stars: 5
@@ -323,7 +314,7 @@ export const projects = [
             developer_productivity: "Reusable sections across multiple stores",
             performance: "Reduced dependency on heavy third-party apps",
         },
-        photo: { src: sec, alt: "Shopify Custom Sections Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386767/sections_hjifjc.png", alt: "Shopify Custom Sections Project Image", priority: false },
         tools: ["Shopify", "Liquid", "JavaScript", "CSS", "Online Store 2.0 JSON Templates"],
         repo: "https://github.com/min23a/shopify-custom-sections",
     },
@@ -373,7 +364,7 @@ export const projects = [
             workflow: "Faster development and testing using Shopify CLI",
             maintainability: "Standardized project structure",
         },
-        photo: { src: starter, alt: "Shopify Starter Theme Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386771/starter_v8nwsr.png", alt: "Shopify Starter Theme Project Image", priority: false },
         tools: ["Shopify", "Shopify CLI", "Liquid", "Sass", "Node.js", "npm"],
         repo: "https://github.com/min23a/shopify-starter-theme",
     },
@@ -423,7 +414,7 @@ export const projects = [
             branding: "Clear personal brand and project visibility",
             performance: "Fast-loading, SEO-friendly structure",
         },
-        photo: { src: web, alt: "Personal Web Project Image", priority: true },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386771/web_r3uxfp.png", alt: "Personal Web Project Image", priority: true },
         tools: ["Next.js", "React", "JavaScript", "Tailwind CSS", "PostCSS", "Node.js"],
         repo: "https://github.com/min23a/Personal-Web",
         link: "https://abedin.online/",
@@ -474,7 +465,7 @@ export const projects = [
             automation: "Reduced manual reporting effort",
             privacy: "Fully local execution without external APIs",
         },
-        photo: { src: ai, alt: "Local Report Agent Mistral Project Image", priority: false },
+        photo: { src: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386756/ai_lqsrb8.png", alt: "Local Report Agent Mistral Project Image", priority: false },
         tools: ["Python", "Local LLM Workflow", "Mistral"],
         repo: "https://github.com/min23a/local-report-agent-mistral",
     }

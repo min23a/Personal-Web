@@ -1,9 +1,3 @@
-import tag from "@/Images/blogImg/tagfilter.png"
-import opt from "@/Images/blogImg/optimization.png"
-import agnt from "@/Images/blogImg/Agentic.png"
-import localseo from "@/Images/blogImg/localseo.webp"
-import strai from "@/Images/blogImg/strai.webp"
-
 export const blogs = [
     {
         slug: "agentic-commerce-protocol-shopify",
@@ -36,7 +30,7 @@ export const blogs = [
                 "Agentic Commerce Protocol (ACP) is an emerging concept that explores how autonomous AI agents can participate directly in online commerce—searching, comparing, negotiating, and completing transactions on behalf of users.\n\nThis article breaks down what ACP is, why it matters, how it may affect Shopify and e-commerce workflows, and what developers and merchants should understand as agent-driven commerce begins to take shape.",
             primaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
             secondaryCta: { label: "View Projects", href: "/projects" },
-            img: agnt,
+            img: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386812/Agentic_kfqz0x.png",
             imgAlt: "Agentic Commerce Protocol (ACP):"
         },
 
@@ -173,7 +167,7 @@ export const blogs = [
                 href: "/blogs/agentic-commerce-protocol-shopify"
             },
             secondaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
-            img: strai,
+            img: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386812/strai_i94xgc.png",
             imgAlt: "Is Your Shopify Store Ready for AI Agents?"
         },
 
@@ -253,7 +247,7 @@ export const blogs = [
 
         seo: {
             title:
-                "Local SEO in the Age of AI: From Traditional SEO to Relevant Search Optimization (RSEO)",
+                "Local SEO in the Age of AI: From Traditional SEO to RSEO",
             description:
                 "A deep look at how local SEO is evolving with AI-driven search. Learn how businesses should adapt from traditional Google SEO to Relevant Search Optimization (RSEO).",
             canonical: "https://abedin.online/local-seo-in-the-age-of-ai-and-rseo",
@@ -276,7 +270,7 @@ export const blogs = [
                 "Local SEO has traditionally focused on ranking in Google’s local search results. However, as AI-driven discovery expands across platforms, local visibility is no longer limited to Google alone.\n\nThis article explores how local SEO is evolving, why \"Relevant Search Optimization\" (RSEO) is becoming important, and how businesses should adapt their strategy in an AI-driven search landscape.",
             primaryCta: { label: "Shopify Developer", href: "/shopify-developer" },
             secondaryCta: { label: "Contact", href: "/contact" },
-            img: localseo,
+            img: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386814/localseo_mlbzrp.png",
             imgAlt: "Local SEO in the Age of AI Illustration"
         },
 
@@ -653,7 +647,7 @@ export const blogs = [
             h1: "Shopify Tag Filtering in Dawn Theme (How It Works & Common Issues)",
             intro:
                 "Shopify’s Dawn theme includes built-in filtering for collections, but many store owners and developers quickly run into limitations. Issues like strict AND logic, unexpected empty results, or poor filtering UX are common—especially for stores with complex product tagging.\n\nThis page explains how tag filtering works in the Dawn theme, why common problems occur, and when a custom solution is the right approach. Whether you’re a store owner or developer, understanding these details can help improve product discovery and customer experience.",
-            img: tag,
+            img: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386814/tagfilter_s96xqs.png",
             imgAlt: "Shopify Tag Filtering",
 
         },
@@ -746,7 +740,7 @@ export const blogs = [
         slug: "shopify-performance-optimization-tips",
         type: "blog-article",
         seo: {
-            title: "Shopify Performance Optimization Tips (Improve Speed & Core Web Vitals)",
+            title: "Shopify Performance Optimization (Improve Speed & Core Web Vitals)",
             description:
                 "Discover practical Shopify performance optimization tips to enhance your store's speed and Core Web Vitals. Learn effective strategies for faster load times and better user experience.",
             canonical: "https://abedin.online/shopify-performance-optimization-tips",
@@ -767,7 +761,7 @@ export const blogs = [
                 "Improving your Shopify store's performance is crucial for enhancing user experience, boosting SEO rankings, and increasing conversion rates. In this article, we'll explore practical tips and strategies for optimizing your Shopify store's speed and Core Web Vitals. From image optimization to code minification, these tips will help you create a faster, more efficient online shopping experience for your customers. \n\nWhether you're a store owner or a developer, implementing these performance optimization techniques can lead to significant improvements in your store's overall performance. Let's dive into the key strategies you can use to enhance your Shopify store's speed and Core Web Vitals.",
             primaryCta: { label: "Hire Shopify Developer", href: "/hire-shopify-developer" },
             secondaryCta: { label: "View Projects", href: "/projects" },
-            img: opt,
+            img: "https://res.cloudinary.com/dfs9igzho/image/upload/v1770386818/optimization_wstg85.png",
             imgAlt: "Shopify Performance Optimization"
         },
 

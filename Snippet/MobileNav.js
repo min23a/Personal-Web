@@ -80,10 +80,10 @@ const MobileNav = () => {
                     menulist.projects ?
                         menulist.projects.subMenu ?
                             <div id={menulist.projects.title} onClick={() => handleclick(menulist.projects.title)} className={link_cls + ' cursor-pointer dropdown relative'}>
-                                <Link href={`/${menulist.projects.link}`} >
+                                <span>
                                     {menulist.projects.title}
                                     <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
-                                </Link>
+                                </span>
                                 <div className="max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[10px] w-full hidden">
                                     <Dropdown menu={menulist.projects.subMenu} parent={menulist.projects.link} />
                                     {menulist.projects.additional ?
@@ -104,10 +104,10 @@ const MobileNav = () => {
                     menulist.blog ?
                         menulist.blog.subMenu ?
                             <div id={menulist.blog.title} onClick={() => handleclick(menulist.blog.title)} className={link_cls + ' cursor-pointer dropdown relative'}>
-                                <Link href={`/${menulist.blog.link}`} >
+                                <span >
                                     {menulist.blog.title}
                                     <FontAwesomeIcon icon={faChevronDown} className='ml-2 text-sm dropdown-arrow transition-all' />
-                                </Link>
+                                </span>
                                 <div className='max-h-0 transition-all duration-300 bottom-[0px] bg-gradient-to-r from-gray-100/10 to-gray-200/10 shadow-xl shadow-gray-200/10 left-[10px] w-full hidden'>
                                     <Dropdown menu={menulist.blog.subMenu} parent={menulist.blog.link} />
                                 </div>

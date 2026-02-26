@@ -25,4 +25,5 @@
 @font-face {
   font-family: "Lavishly";
   src: url("./LavishlyYours-Regular.woff2") format("woff2");
+  font-display: swap;
 }
